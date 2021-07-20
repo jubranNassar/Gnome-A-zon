@@ -37,7 +37,7 @@ export const createGnome = async (req, res) => {
 
 export const updateGnome = async (req, res) => {
   const { id } = req.params
-  const Gnome = await Gnome.findByIdAndUpdate(id, req.body, { new: true })
+  const gnome = await Gnome.findByIdAndUpdate(id, req.body, { new: true })
   res.status(200).json(gnome)
 }
 
