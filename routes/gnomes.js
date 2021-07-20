@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import * as controllers from '../controllers/gnomes.js';
-import restrict from '../helpers.restrict.js';
+import restrict from '../helpers/restrict.js';
 
 const router = Router ()
 
