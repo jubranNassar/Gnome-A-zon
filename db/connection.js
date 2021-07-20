@@ -14,9 +14,6 @@ let MONGODB_URI =
 //command to create indexes in MongoDB by default for faster queries
 mongoose.set('useCreateIndex', true);
 
-//This is for Model.findByIdAndUpdate method, specifically so that {new: true} is the default
-//which means the response to and update will return the record with newly updated information
-//rather than the original pre-update data.
 mongoose.set('returnOriginal', false);
 
 //Setup connection for MongoDB
