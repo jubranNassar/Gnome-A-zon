@@ -13,4 +13,4 @@ const restrict = (req, res, next) => {
   }
 }
 
-export default restrict
+export default restrict;
