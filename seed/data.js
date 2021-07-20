@@ -1,5 +1,5 @@
 import db from '../db/connection.js'
-import Gnome from '../models/gnomes.js'
+import Gnome from '../models/gnome.js'
 import User from '../models/user.js'
 import bcrypt from 'bcrypt'
 
@@ -35,28 +35,31 @@ const insertData = async () => {
   
   const gnomes = [
     {
-      Gnome: 'Reading Gnome', 
+      name: 'Reading Gnome', 
       details: 'studying with a fake smile',
       image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmyzbVfmwpUCke0KA2NmRL6EeUwcQ9B0F2A&usqp=CAU', 
       materials: 'hard clay',
       category:[ 'edumacation'],
-      price: '12.95'
+      price: '12.95',
+      seller: 'GnomeDaddy'
     }, 
     {
-      Gnome: 'Harley Gnome', 
+      name: 'Harley Gnome', 
       details: 'Watch out! This is a bad mothah! This grandpa gnome comes geared up in his leather!. If only he can find her hog',
       image_url: 'https://secure.img1-fg.wfcdn.com/im/99517139/compr-r85/5802/58026301/knucklehead-the-harley-davidson-gnome-statue.jpg', 
       materials: 'steel',
       category: ['rock-star'],
-      price: '15.99'
+      price: '15.99',
+      seller: 'GnomeMommy'
     }, 
     {
-      Gnome: 'Zombie Gnome', 
+      name: 'Zombie Gnome', 
       details: 'the creeps come out at night, walking dead',
       image_url: 'https://cdn.shopify.com/s/files/1/1241/5688/products/CL6565_2_1024x1024.jpg?v=1563637920',
       materials: 'cement',
       category: ['halloween'],
-      price: '29.99'
+      price: '29.99',
+      seller: 'GnomeBaby'
     },
     {
       name: 'Santa Gnome',
