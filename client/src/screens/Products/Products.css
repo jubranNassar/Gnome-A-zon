@@ -5,8 +5,10 @@
   flex-wrap: wrap;
 }
 
-.products-heading {
+.product-heading {
+  background-color: #8FC25E;
   text-align: center;
+  width: 121.3rem;
 }
 
 .product-page {
