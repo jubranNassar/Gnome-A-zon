@@ -1,31 +1,30 @@
 .home {
-  
-  
-  
-  /* background-size: cover; */
+  background-image: url("../../images/gmoneByTree.jpeg");
+  background-size: cover;
+  height: 90vh;
+
+.welcome_home_card {
+  background-color: #8FC25E;
+  width: 35vw;
+  height: 35vh;
+  text-align: center;
+  padding-top: 4rem;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  opacity: 0.8;
 }
 
 .heading_home_text {
-
+  font-size: 40px;
 }
 
 .subtext_home_text {
   padding-top: 5rem;
-}
-
-
-.welcome_home_card {
-  background-color: #8FC25E;
-  width: 45vw;
-  height: 35vh;
-  text-align: center;
-  padding-top: 4rem;
-  margin-top: 6rem;
-  margin-left: 2rem;
+  font-size: 30px;
   
 }
 
-button {
+.home_button {
   background-color: #8FC25E;
   margin-left: 16rem;
   margin-top: 1rem;
@@ -34,6 +33,7 @@ button {
   border: none;
   outline:none; 
   border-radius: 4px;
+  font-size:32px ;
   
 }
 
