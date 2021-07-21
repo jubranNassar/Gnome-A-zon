@@ -1,6 +1,7 @@
 .home {
   background-image: url("../../images/gmoneByTree.jpeg");
   background-size: cover;
+
   height: 120vh;
 }
 
@@ -8,7 +9,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: 90vh;
 }
+
 
 .welcome_home_card {
   background-color: #8FC25E;
