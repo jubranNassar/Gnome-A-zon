@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import "./ProductDetail.css";
+import "./ProductDetails.css";
+import { getGnome, deleteGnome } from "../../services/gnomes"
 import  Layout  from "../../components/Layout/Layout.jsx";
 import { useParams, Link } from "react-router-dom";
+
 
 function GnomeDetails(props) {
   const [gnome, setGnome] = useState(null);
@@ -35,7 +37,7 @@ function GnomeDetails(props) {
             <Link className="edit" to={`/edit/${gnome._id}`}>
               Edit
             </Link>
-            <button className="delete" onClick={() => deletGnome(gnome._id)}>
+            <button className="delete" onClick={() => deleteGnome(gnome._id)}>
               Delete
             </button>
           </div>
@@ -45,4 +47,4 @@ function GnomeDetails(props) {
   );
 }
 
-export default ProductDetails;
+export default GnomeDetails;
