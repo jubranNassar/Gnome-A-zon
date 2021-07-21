@@ -5,7 +5,7 @@ const ProductCard = (props) => {
   return (
     <div className="product-card">
       <Link to={`/gnomes/${props._id}`}>
-        <img src={props.image} alt="" />
+        <img id="image-card" src={props.image} alt="" />
         <div className="product-card-text">
           <p>{props.name}</p>
           <p>${props.price}</p>
