@@ -1,7 +1,6 @@
 .home {
   background-image: url("../../images/gmoneByTree.jpeg");
   background-size: cover;
-
   height: 120vh;
 }
 
@@ -9,34 +8,35 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 90vh;
+  height: 70vh;
 }
 
 
 .welcome_home_card {
   background-color: #8FC25E;
   width: 35vw;
-  height: 35vh;
+  height: 38vh;
   text-align: center;
   padding-top: 4rem;
   margin-top: 4rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
   opacity: 0.8;
 }
 
 .heading_home_text {
   font-size: 40px;
+  font-family: Dancing Script;
 }
 
 .subtext_home_text {
   padding-top: 5rem;
   font-size: 30px;
-  
+  font-family: Delius Swash Caps;
 }
 
 .home_button {
   background-color: #8FC25E;
-  margin-left: 16rem;
+  margin-left: 18rem;
   margin-top: 1rem;
   width: 15vw;
   height: 8vh;
@@ -44,6 +44,51 @@
   outline:none; 
   border-radius: 4px;
   font-size:32px ;
+  font-family: Open sans;
   
 }
 
+@media screen and (max-width:600px) {
+  .home_inner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+
+  .welcome_home_card {
+    background-color: #8FC25E;
+    width: 35vw;
+    height: 38vh;
+    text-align: center;
+    padding-top: 4rem;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    opacity: 0.8;
+  }
+
+  .heading_home_text {
+    font-size: 40px;
+    font-family: Dancing Script;
+  }
+
+  .subtext_home_text {
+    padding-top: 5rem;
+    font-size: 30px;
+    font-family: Delius Swash Caps;
+  }
+
+  .home_button {
+    background-color: #8FC25E;
+    margin-left: 18rem;
+    margin-top: 1rem;
+    width: 15vw;
+    height: 8vh;
+    border: none;
+    outline:none; 
+    border-radius: 4px;
+    font-size:32px ;
+    font-family: Open sans;
+    
+  }
+}
