@@ -1,31 +1,53 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
 .products-container {
   display: grid;
   grid-gap: 15rem;
   grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
-}
+  }
 
 .product-heading {
   background-color: #8fc25e;
   border: 1px solid #454021;
+  font-family: "Dancing Script", cursive;
   font-size: 5.2rem;
   margin: 3rem 0;
   padding: 1rem 0;
   text-align: center;
   width: 121.3rem;
+
+  animation: fadeInAnimation ease 2s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .product-page {
+  align-items: center;
   background-image: url(../../images/yellowforest.jpeg);
-  background-color: rgba(196, 196, 196, .45);
+  background-color: rgba(196, 196, 196, 0.45);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  height: 0;
+  padding-bottom: 65.89%;
   flex-direction: column;
-  align-items: center;
 }
 
-.test{
+
+.test {
   background-blend-mode: overlay;
 }
+
