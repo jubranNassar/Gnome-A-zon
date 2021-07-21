@@ -8,7 +8,7 @@ const ProductCard = (props) => {
         <img src={props.image} alt="" />
         <div className="product-card-text">
           <p>{props.name}</p>
-          <p>{props.price}</p>
+          <p>${props.price}</p>
         </div>
       </Link>
     </div>
