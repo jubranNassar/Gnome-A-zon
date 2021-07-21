@@ -1,11 +1,11 @@
 import './Home.css'
-import { Layout, ProductCards } from '../../components'
+import Layout from '../../components/Layout/Layout.jsx'
 
 const Home = (props) => {
   return (
     <Layout user={props.user}>
       <div className='home'>
-        <ProductCards />
+        
       </div>
     </Layout>
   )
