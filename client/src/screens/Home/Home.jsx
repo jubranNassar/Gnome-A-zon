@@ -10,7 +10,7 @@ const Home = (props) => {
         <h1> Welcome to Gnome-A-Zon!</h1>
         <h2>Your source for garden fun and whimsey. Adopt a gnome or rehome your gnome today!</h2>
         </div>
-        <Link className='shop_gnomes-button' to={'/products'}><button> Shop Gnomes</button> </Link>
+        <Link className='shop_gnomes_button' to={'/products'}><button> Shop Gnomes</button> </Link>
       </div>
     </Layout>
   )
