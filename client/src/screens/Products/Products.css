@@ -1,0 +1,16 @@
+.products-container {
+  display: grid;
+  grid-gap: 15rem;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+}
+
+.products-heading {
+  text-align: center;
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
