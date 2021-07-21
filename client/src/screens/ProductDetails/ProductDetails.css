@@ -1,39 +1,52 @@
 .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-image: url(../../images/detailScreenImage.jpeg);
-  background-color: rgba(196, 196, 196, .45);
   background-position:center;
   background-size:cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
 
+.border {
+  display: flex;
+  height: 100vh;
 }
 
 .details-card {
-  position: relative;
   display: flex;
   margin: auto;
   justify-content: center;
-  padding: 100px;
-  padding-top: 80;
+  align-items: center;
+  padding: 80px;
   background-color: #8FC25E;
   background: rgba(143, 194, 94, 0.7);
-  width: 70vw;
+  width: 65vw;
+  height: 70vh;
 }
 
 .details {
   display: flex;
   flex-direction: column;
+  align-items: center;
   line-height: 1.6;
 }
 
 #name {
+  display: flex;
   font-family: Delius Swash Caps;
   font-size: 64px;
   letter-spacing: 1px;
   padding: 5px;
+  margin: 10px;
+  line-height: 50px;
 }
 
 #price {
   font-size: 24px;
+  margin: 0 15px;
 }
 
 #description {
@@ -56,53 +69,88 @@
 
 .details-img {
   width: 500px;
-  height: 500px;
+  height: 550px;
   padding: 0 40px;
 }
 
-.buttons {
+#buttons {
   display: flex;
-  justify-content: space-evenly;
+  width: 18vw;
+  justify-content: space-between;
 }
 
-.edit {
+#edit {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 2.6rem;
   text-align: center;
-  height: 40px;
-  width: 200px;
+  min-width: 100px;
+  height: 6vh;
+  width: 7vw;
   align-self: center;
   background-color: #454021;
   margin-top: 40px;
   color: white;
-  border-radius: 5%;
+  border-radius: 10px;
   cursor: pointer;
   padding: 2px;
 }
 
-.delete {
+#delete {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 2.6rem;
   text-align: center;
-  height: 40px;
-  width: 200px;
+  min-width: 100px;
+  height: 6vh;
+  width: 7vw;
   align-self: center;
   background-color: #454021;
   margin-top: 40px;
   color: white;
-  border-radius: 5%;
+  border-radius: 10px;
   cursor: pointer;
   padding: 2px;
 }
-
 
 .label-input {
+  width: 30vw;
+  min-width: 260px;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2rem;
+}
+
+
+#desc-label {
+  display: flex;
+  align-self: start;
+  margin-top: -60px;
 }
 
 .details-label {
   display: flex;
-  align-items: center;
-  font-size: 24px;
+  font-size: 24px; 
+}
 
+.labels {
+  min-width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.text {
+  display: flex;
+  justify-content: start;
+  margin-left: 10px;
+}
+
+
+.name-and-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 800px;
+  margin-bottom: 20px;
 }
