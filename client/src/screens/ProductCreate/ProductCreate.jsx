@@ -46,74 +46,105 @@ function ProductCreate() {
 
   return (
     <Layout>
-      <form className='create-form' onSubmit={handleSubmit}>
-        <label htmlFor="name-input">Gnome Name: </label>
-        <input 
-          type="text" 
-          id="name-input"
-          className="name-input"
-          name="name"
-          value={gnome.name}
-          onChange={handleChange}
-          required
-          autoFocus
-        />
+      <div className='forms-screen'>
+        <div className='forms-card'>
+          <h3 className='form-title'>Sell a Gnome</h3>
+          <form className='create-form' onSubmit={handleSubmit}>
 
-        <label htmlFor="price-input">Price: </label>
-        <input
-          type="text" 
-          id="price-input"
-          className="price-input"
-          name="price"
-          value={gnome.price}
-          onChange={handleChange}
-          required
-        />
+            <div className='form-label-input-div'>
+              <div className="label-div">
+                  <label htmlFor="name-input">Gnome Name:</label>
+                </div>
+              <input 
+                type="text" 
+                id="name-input"
+                className="name-input form-input"
+                name="name"
+                value={gnome.name}
+                onChange={handleChange}
+                required
+                autoFocus
+              />
+            </div>
 
-        <label htmlFor="details-input">Details: </label>
-        <textarea 
-          id="details-input"
-          className="details-input"
-          name="details"
-          value={gnome.details}
-          onChange={handleChange}
-          required
-        />
+            <div className='form-label-input-div'>
+              <div className="label-div">
+                <label htmlFor="price-input">Price: </label>
+              </div>
+              <input
+                  type="text" 
+                id="price-input"
+                className="price-input form-input"
+                name="price"
+                value={gnome.price}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-        <label htmlFor="imageURL-input">Image URL: </label>
-        <input 
-          type="text" 
-          id="imageURL-input"
-          className="imageURL-input"
-          name="image_url"
-          value={gnome.image_url}
-          onChange={handleChange}
-          required
-        />
+            <div className='form-label-input-div'>
+              <div className="label-div">
+                <label htmlFor="details-input">Details: </label>
+              </div>
+              <textarea 
+                id="details-input"
+                className="details-input form-input"
+                name="details"
+                rows = "4"
+                value={gnome.details}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-        <label htmlFor="materials-input">Materials: </label>
-        <input
-          type="text" 
-          id="materials-input"
-          className="materials-input"
-          name="materials"
-          value={gnome.materials}
-          onChange={handleChange}
-          required
-        />
+            <div className='form-label-input-div'>
+              <div className="label-div">
+                <label htmlFor="imageURL-input">Image URL: </label>
+              </div>
+              <input 
+                type="text" 
+                id="imageURL-input"
+                className="imageURL-input form-input"
+                name="image_url"
+                value={gnome.image_url}
+                onChange={handleChange}
+                required
+            />
+            </div>
 
-        <label htmlFor="category-input">Category: </label>
-        <input
-          type="text" 
-          id="category-input"
-          className="category-input"
-          name="category"
-          value={gnome.category}
-          onChange={handleSelect}
-          required
-        />
-        <button type="submit">Submit</button>
-      </form>
+            <div className='form-label-input-div'>  
+              <div className="label-div">   
+                <label htmlFor="materials-input">Materials: </label>
+              </div>
+              <input
+                type="text" 
+                id="materials-input"
+                className="materials-input form-input"
+                name="materials"
+                value={gnome.materials}
+                onChange={handleChange}
+                required
+              />
+            </div> 
+
+            <div className='form-label-input-div'>
+              <div className="label-div">
+                <label htmlFor="category-input">Category: </label>
+              </div>
+              <input
+                type="text" 
+                id="category-input"
+                className="category-input form-input"
+                name="category"
+                value={gnome.category}
+                onChange={handleSelect}
+                required
+              />
+            </div>
+            <button type="submit" className="form-submit-button">Submit</button>
+          </form>
+        </div>
+      </div>
     </Layout>
   )
 }

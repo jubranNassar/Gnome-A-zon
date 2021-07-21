@@ -1,0 +1,81 @@
+.forms-screen {
+  background: center / cover no-repeat url("../../images/formScreensImage.jpeg");
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+
+.create-form {
+  height: 80vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.forms-card {
+  background-color: #8ec25ef1;
+  width: 50vw;
+  height: 85vh;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 2vh 0;
+}
+
+.form-label-input-div {
+  width: 40vw;
+  min-width: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-left: -7vw;
+}
+
+
+.form-input {
+  width: 20vw;
+  min-width: 120px;
+}
+
+.label-div {
+  width: 15vw;
+  min-width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.form-title {
+  margin: 2vh;
+  font-size: 3rem;
+  font-family: 'Delius Swash Caps', cursive; 
+}
+
+.form-submit-button {
+  color: white;
+  background-color: #454021;
+  border: none;
+  padding: 1vh;
+  width: 12vw;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.3rem;
+  border-radius: 10px;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  resize: none;
+}
