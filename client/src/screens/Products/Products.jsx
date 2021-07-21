@@ -15,9 +15,9 @@ const Products = (props) => {
     fetchProducts();
   }, []);
   return (
-    <div className="product-page">
+    <div className="product-page test">
       <div className="product-heading">
-        <h1>Gnomes Seeking Homes</h1>
+        <p>Gnomes Seeking Homes</p>
       </div>
       <div className="products-container">
         {products.map((product, index) => (
