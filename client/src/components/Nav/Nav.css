@@ -4,14 +4,26 @@ nav {
 .nav {
   background-color: #A6AE9C;
   align-items: center;
-  justify-content: space-between;
-  justify-self: start-end;
   display: flex;
   height:5rem;
-  width: 80vw;
+  text-align: end;
+  width: 75vw;
   z-index: 2;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+}
 .links {
-  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  flex: 2;
+  max-width: 65vw;
+  font-size: 1.8rem;
+}
+.link {
+  flex: 1;
+  margin-left: 3vw;
 }
