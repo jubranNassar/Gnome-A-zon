@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./ProductDetail.css";
 import  Layout  from "../../components/Layout/Layout.jsx";
+import { Layout } from "../../components/Layout/Layout.jsx";
 import { useParams, Link } from "react-router-dom";
 
 function GnomeDetails(props) {
