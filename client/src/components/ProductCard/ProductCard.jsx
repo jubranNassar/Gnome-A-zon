@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = (props) => {
   return (
-    <div className="product-card">
+    <div className="product-card grow-rotate">
       <Link to={`/gnomes/${props._id}`}>
         <img id="image-card" src={props.image} alt="" />
         <div className="product-card-text">

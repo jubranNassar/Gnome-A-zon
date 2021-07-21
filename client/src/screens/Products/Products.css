@@ -1,9 +1,13 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
 .products-container {
   display: grid;
   grid-gap: 15rem;
   grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
-}
+  }
 
 .product-heading {
   background-color: #8fc25e;
@@ -14,6 +18,19 @@
   padding: 1rem 0;
   text-align: center;
   width: 121.3rem;
+
+  animation: fadeInAnimation ease 2s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .product-page {
@@ -28,6 +45,7 @@
   padding-bottom: 65.89%;
   flex-direction: column;
 }
+
 
 .test {
   background-blend-mode: overlay;
