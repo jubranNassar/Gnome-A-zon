@@ -6,15 +6,16 @@ import { useParams, Link } from "react-router-dom";
 
 
 function GnomeDetails(props) {
-  const [gnome, setGnome] = useState(null);
+  const [gnome, setGnome] = useState([]);
   const [loaded, setLoaded] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchGnome = async () => {
       const gnome = await getGnome(id);
+      console.log('detail',gnome)
       setGnome(gnome);
-      setLoaded(false);
+      setLoaded(gnome);
     };
     fetchGnome();
   }, [id]);
