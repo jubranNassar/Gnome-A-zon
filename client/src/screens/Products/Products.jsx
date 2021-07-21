@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getGnomes } from "../src/services/gnomes.js";
+import { getGnomes } from "../../services/gnomes.js";
 import "./Products.css";
 
 const Products = (props) => {
