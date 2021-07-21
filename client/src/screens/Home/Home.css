@@ -1,0 +1,36 @@
+body {
+  background-image: url("https://i.huffpost.com/gadgets/slideshows/287822/slide_287822_2251218_free.jpg");
+}
+
+.heading_home_text {
+
+}
+
+.subtext_home_text {
+  padding-top: 5rem;
+}
+
+
+.welcome_home_card {
+  background-color: #8FC25E;
+  width: 45vw;
+  height: 35vh;
+  text-align: center;
+  padding-top: 4rem;
+  margin-top: 6rem;
+  margin-left: 2rem;
+  
+}
+
+button {
+  background-color: #8FC25E;
+  margin-left: 16rem;
+  margin-top: 1rem;
+  width: 15vw;
+  height: 8vh;
+  border: none;
+  outline:none; 
+  border-radius: 4px;
+  
+}
+
