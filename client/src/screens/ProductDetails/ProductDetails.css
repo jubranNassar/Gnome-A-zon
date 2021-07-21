@@ -1,0 +1,108 @@
+.product-info {
+  background-image: url(../../images/detailScreenImage.jpeg);
+  background-color: rgba(196, 196, 196, .45);
+  background-position:center;
+  background-size:cover;
+  background-repeat: no-repeat;
+
+}
+
+.details-card {
+  position: relative;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding: 100px;
+  padding-top: 80;
+  background-color: #8FC25E;
+  background: rgba(143, 194, 94, 0.7);
+  width: 70vw;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+#name {
+  font-family: Delius Swash Caps;
+  font-size: 64px;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+
+#price {
+  font-size: 24px;
+}
+
+#description {
+  font-size: 24px;
+  padding: 10px;
+  letter-spacing: 0.9px;
+}
+
+#materials {
+  font-size: 24px;
+  padding: 10px;
+  letter-spacing: 0.9px;
+}
+
+#collection{
+  font-size: 24px;
+  padding: 10px;
+  letter-spacing: 0.9px;
+}
+
+.details-img {
+  width: 500px;
+  height: 500px;
+  padding: 0 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.edit {
+  text-decoration: none;
+  font-size: 22px;
+  text-align: center;
+  height: 40px;
+  width: 200px;
+  align-self: center;
+  background-color: #454021;
+  margin-top: 40px;
+  color: white;
+  border-radius: 5%;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.delete {
+  text-decoration: none;
+  font-size: 22px;
+  text-align: center;
+  height: 40px;
+  width: 200px;
+  align-self: center;
+  background-color: #454021;
+  margin-top: 40px;
+  color: white;
+  border-radius: 5%;
+  cursor: pointer;
+  padding: 2px;
+}
+
+
+.label-input {
+  display: flex;
+}
+
+.details-label {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+
+}
