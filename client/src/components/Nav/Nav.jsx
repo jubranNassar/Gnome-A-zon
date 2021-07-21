@@ -1,7 +1,7 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 
-const authenticatedOption = (
+const authenticatedOptions = (
   <>
     <NavLink to="/create">Rehome a Gnome</NavLink>
     <NavLink to="/sign-out">Sign Out</NavLink>
@@ -14,7 +14,7 @@ const unauthenticatedOptions = (
     <NavLink to="/sign-in">Sign In</NavLink>
   </>
 );
-const alwaysOption = (
+const alwaysOptions = (
   <>
     <NavLink to="/gnomes">Gnomes</NavLink>
   </>
@@ -22,8 +22,12 @@ const alwaysOption = (
 function Nav({ user }) {
   return (
     <nav>
-      <div className="nav"> 
-
+      <div className="nav">
+        <div className="links">
+          {user && <div className="link welcome">Welcome, {user.username}</div>}
+          {alwaysOptions}
+          {user ? authenticatedOptions : unauthenticatedOptions}
+        </div>
       </div>
     </nav>
   );
