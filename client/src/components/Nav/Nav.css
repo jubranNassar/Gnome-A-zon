@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+}
+.nav {
+  background-color: #A6AE9C;
+  align-items: center;
+  display: flex;
+  height:5rem;
+  text-align: end;
+  width: 75vw;
+  z-index: 2;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+}
+.links {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  max-width: 65vw;
+  font-size: 1.8rem;
+}
+.link {
+  flex: 1;
+  margin-left: 3vw;
+}
