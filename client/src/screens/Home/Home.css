@@ -1,7 +1,13 @@
 .home {
   background-image: url("../../images/gmoneByTree.jpeg");
   background-size: cover;
-  height: 90vh;
+  height: 120vh;
+}
+
+.home_inner{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .welcome_home_card {
