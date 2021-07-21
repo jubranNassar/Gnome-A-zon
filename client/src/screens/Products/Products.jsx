@@ -9,11 +9,13 @@ const Products = (props) => {
     const fetchProducts = async () => {
       const allProducts = await getGnomes();
       setProducts(allProducts);
+      console.log('Items',allProducts)
     };
     fetchProducts();
-  });
+  },[]);
   return (
     <div>
+      <h1>Gnomes Seeking Homes</h1>
       {products.map((product) => (
         <main>
           <h1>{product.name}</h1>
