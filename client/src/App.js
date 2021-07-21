@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Route } from 'react-router-dom';
 import Home from './screens/Home/Home.jsx';
 import Products from './screens/Products/Products.jsx';
@@ -11,6 +12,9 @@ import SignUp from './screens/SignUp/SignUp.jsx';
 import './App.css';
 
 function App() {
+
+  const [user, setUser] = useState(null);
+
   return (
     <div className="App">
       <Route exact path = '/'>
@@ -26,19 +30,19 @@ function App() {
       </Route>
 
       <Route path = "/edit/:id">
-        < ProductEdit />
+        < ProductEdit user={user}/>
       </Route>
 
       <Route exact path = "/create">
-        < ProductCreate />
+        < ProductCreate user={user}/>
       </Route>
 
       <Route exact path = "/sign-up">
-        < SignUp />
+        < SignUp setUser={setUser}/>
       </Route>
 
       <Route exact path = "/sign-in">
-        < SignIn />
+        < SignIn setUser={setUser}/>
       </Route>
 
       <Route exact path = "/sign-out">
