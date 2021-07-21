@@ -1,5 +1,5 @@
 import './Home.css'
-import { Layout, ProductCards } from '../../components'
+import Layout from '../../components/Layout/Layout.jsx'
 
 const Home = (props) => {
   return (
