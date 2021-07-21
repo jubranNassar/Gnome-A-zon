@@ -3,6 +3,7 @@ import "./ProductDetail.css";
 import  Layout  from "../../components/Layout/Layout.jsx";
 import { useParams, Link } from "react-router-dom";
 
+
 function GnomeDetails(props) {
   const [gnome, setGnome] = useState(null);
   const [loaded, setLoaded] = useState(true);
