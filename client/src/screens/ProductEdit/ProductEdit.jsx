@@ -9,8 +9,7 @@ function ProductEdit(props) {
     name: "",
     price: "",
     details: "",
-    material: "",
-    material: "",
+    materials: "",
     category: "",
     image_url: "",
   });
@@ -93,8 +92,8 @@ function ProductEdit(props) {
         <label htmlFor="edit-material">Material:</label>
           <input
             id="edit-material"
-            value={gnome.material}
-            name="material"
+            value={gnome.materials}
+            name="materials"
             required
             onChange={handleChange}
           />
