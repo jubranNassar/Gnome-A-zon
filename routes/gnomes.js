@@ -8,10 +8,10 @@ router.get('/gnomes', controllers.getGnomes);
 router.get('/gnomes/:id', controllers.getGnome);
 
 // post
-router.post('/', restrict, controllers.createGnome);
+router.post('/gnomes', restrict, controllers.createGnome);
 // put
-router.put('/:id', restrict, controllers.updateGnome);
+router.put('/gnomes/:id', restrict, controllers.updateGnome);
 // delete
-router.delete('/:id', restrict, controllers.deleteGnome);
+router.delete('/gnomes/:id', restrict, controllers.deleteGnome);
 
 export default router;
