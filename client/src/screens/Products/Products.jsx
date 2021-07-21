@@ -20,11 +20,13 @@ const Products = (props) => {
         <h1>Gnomes Seeking Homes</h1>
       </div>
       <div className="products-container">
-        {products.map((product) => (
+        {products.map((product, index) => (
           <ProductCard
+            _id={product._id}
             image={product.image_url}
             name={product.name}
             price={product.price}
+            key={index}
           />
         ))}
       </div>
