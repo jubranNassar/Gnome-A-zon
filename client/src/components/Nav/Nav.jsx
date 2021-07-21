@@ -19,11 +19,13 @@ const alwaysOption = (
     <NavLink to="/gnomes">Gnomes</NavLink>
   </>
 );
-function Nav(props) {
+function Nav({ user }) {
   return (
-    <div>
-      <nav>NavLinks</nav>
-    </div>
+    <nav>
+      <div className="nav"> 
+
+      </div>
+    </nav>
   );
 }
 

@@ -1,0 +1,24 @@
+.header {
+  background-color: #8FC25E;
+  height: 12rem;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  text-align: center;
+  padding:1rem 0;
+}
+.quote-box{
+  background-color: #454021;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  padding: 1rem;
+
+}
+
+.quote {
+  width: fit-content;
+}
