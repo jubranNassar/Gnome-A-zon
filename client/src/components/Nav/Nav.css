@@ -1,3 +1,17 @@
 nav {
+  display: flex;
+}
+.nav {
   background-color: #A6AE9C;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: start-end;
+  display: flex;
+  height:5rem;
+  width: 80vw;
+  z-index: 2;
+}
+
+.links {
+  font-size: 1.6rem;
 }

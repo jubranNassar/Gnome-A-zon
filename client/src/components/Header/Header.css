@@ -1,6 +1,9 @@
 .header {
   background-color: #8FC25E;
-  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 13rem;
 }
 
 .title {

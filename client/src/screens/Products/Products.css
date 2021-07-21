@@ -44,6 +44,7 @@ animation-fill-mode: forwards;
   height: 0;
   padding-bottom: 65.89%;
   flex-direction: column;
+  z-index: -1;
 }
 
 
