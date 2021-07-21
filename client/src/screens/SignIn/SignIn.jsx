@@ -39,7 +39,7 @@ const SignIn = (props) => {
   }
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
+    const toggleForm = form.isError ? 'danger form-submit-button' : 'form-submit-button'
     if (form.isError) {
       return (
         <button type='submit' className={toggleForm}>
@@ -47,36 +47,50 @@ const SignIn = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign In</button>
+      return <button type='submit' className='form-submit-button'>Sign In</button>
     }
   }
 
   const { email, password } = form
 
   return (
-    <div className='form-container'>
-      <h3>Sign In</h3>
-      <form onSubmit={onSignIn}>
-        <label>Email</label>
-        <input
-          required
-          type='text'
-          name='email'
-          value={email}
-          placeholder='Enter Email'
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name='password'
-          value={password}
-          type='password'
-          placeholder='Password'
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
+    <div className='forms-screen'>
+      <div className='sign-in-forms-card'>
+        <h3 className='form-title'>Sign In</h3>
+        <form onSubmit={onSignIn} className='auth-form'>
+
+          <div className='form-label-input-div'>
+            <div className="label-div">
+              <label>Email:</label>
+            </div>
+            <input
+              required
+              type='text'
+              name='email'
+              className= 'form-input'
+              value={email}
+              placeholder='Enter Email'
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className='form-label-input-div'>
+            <div className="label-div">
+              <label>Password:</label>
+            </div>
+            <input
+              required
+              name='password'
+              className= 'form-input'
+              value={password}
+              type='password'
+              placeholder='Password'
+              onChange={handleChange}
+            />
+          </div>
+          {renderError()}
+        </form>
+      </div>
     </div>
   )
 }

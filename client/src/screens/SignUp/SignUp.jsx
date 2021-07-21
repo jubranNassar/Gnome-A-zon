@@ -42,7 +42,7 @@ const SignUp = (props) => {
   }
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
+    const toggleForm = form.isError ? 'danger form-submit-button' : 'form-submit-button'
     if (form.isError) {
       return (
         <button type='submit' className={toggleForm}>
@@ -50,54 +50,80 @@ const SignUp = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign Up</button>
+      return <button type='submit' className='form-submit-button'>Sign Up</button>
     }
   }
 
   const { username, email, password, passwordConfirmation } = form
 
   return (
-    <div className='form-container'>
-      <h3>Sign Up</h3>
-      <form onSubmit={onSignUp}>
-        <label>Username</label>
-        <input
-          required
-          type='text'
-          name='username'
-          value={username}
-          placeholder='Enter username'
-          onChange={handleChange}
-        />
-        <label>Email address</label>
-        <input
-          required
-          type='email'
-          name='email'
-          value={email}
-          placeholder='Enter email'
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name='password'
-          value={password}
-          type='password'
-          placeholder='Password'
-          onChange={handleChange}
-        />
-        <label>Password Confirmation</label>
-        <input
-          required
-          name='passwordConfirmation'
-          value={passwordConfirmation}
-          type='password'
-          placeholder='Confirm Password'
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
+    <div className='forms-screen'>
+      <div className='auth-forms-card'>
+        <h3 className='form-title'>Sign Up</h3>
+        <form onSubmit={onSignUp} className='auth-form'>
+
+          <div className='form-label-input-div'>
+            <div className="label-div">
+              <label>Username:</label>
+            </div>
+            <input
+            required
+            type='text'
+            name='username'
+            className= 'form-input'
+            value={username}
+            placeholder='Enter username'
+            onChange={handleChange}
+            />
+          </div>
+
+          <div className='form-label-input-div'>
+            <div className="label-div">
+              <label>Email address:</label>
+            </div>
+            <input
+              required
+              type='email'
+              name='email'
+              className= 'form-input'
+              value={email}
+              placeholder='Enter email'
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className='form-label-input-div'>
+            <div className="label-div">
+              <label>Password:</label>
+            </div>
+            <input
+              required
+              name='password'
+              value={password}
+              type='password'
+              className= 'form-input'
+              placeholder='Password'
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className='form-label-input-div'>
+            <div className="label-div">
+              <label>Confirm Password:</label>
+            </div>
+            <input
+              required
+              name='passwordConfirmation'
+              className= 'form-input'
+              value={passwordConfirmation}
+              type='password'
+              placeholder='Confirm Password'
+              onChange={handleChange}
+            />
+          </div>
+            {renderError()}
+        </form>
+      </div>
     </div>
   )
 }
