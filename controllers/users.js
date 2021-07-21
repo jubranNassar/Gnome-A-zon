@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import User from '../models/user.js'
 
 const SALT_ROUNDS = process.env.SALT_ROUNDS || 11
-const TOKEN_KEY = process.env.TOKEN_KEY || 'areallylonggoodkey'
+const TOKEN_KEY = process.env.TOKEN_KEY || '$@1+yGnOme$'
 
 // for JWT expiration
 const today = new Date()
