@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 function Layout (props) {
   return (
     <div className="layout">
-      < Header />
+      < Header user={props.user}/>
       <div className="layout-children">
         {props.children}
       </div>
