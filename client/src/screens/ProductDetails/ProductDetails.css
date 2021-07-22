@@ -24,7 +24,8 @@
   background-color: #8FC25E;
   background: rgba(143, 194, 94, 0.7);
   width: 65vw;
-  height: 70vh;
+  height: 55vh;
+  min-height: 350px;
 }
 
 .details {
@@ -32,6 +33,8 @@
   flex-direction: column;
   align-items: center;
   line-height: 1.6;
+  width: 55vw;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #name {
@@ -53,7 +56,10 @@
   font-size: 24px;
   padding: 10px;
   letter-spacing: 0.9px;
+  max-height: 100px;
+  overflow-y: auto;
 }
+
 
 #materials {
   font-size: 24px;
@@ -68,14 +74,14 @@
 }
 
 .details-img {
-  width: 500px;
-  height: 550px;
-  padding: 0 40px;
+  width: 28vw;
+  border: 2px solid #454021;
 }
 
 #buttons {
   display: flex;
-  width: 18vw;
+  width: 20vw;
+  gap: 15px;
   justify-content: space-between;
 }
 
@@ -112,20 +118,14 @@
 }
 
 .label-input {
-  width: 30vw;
+  width: 35vw;
   min-width: 260px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   font-size: 2rem;
 }
 
-
-#desc-label {
-  display: flex;
-  align-self: start;
-  margin-top: -60px;
-}
 
 .details-label {
   display: flex;
@@ -137,6 +137,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 10px;
 }
 
 .text {
@@ -151,6 +152,37 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 800px;
   margin-bottom: 20px;
+  margin-right: -50px
+}
+
+@media only screen and (max-width: 880px) {
+  #name {
+    font-size: 38px;
+  }
+
+  .details {
+    line-height: normal;
+  }
+
+  #price {
+    font-size:20px;
+  }
+
+  #description {
+    font-size:20px;
+  }
+
+  #materials {
+    font-size:20px;
+  }
+
+  #collection {
+    font-size:20px;
+
+  }
+
+  #buttons {
+    gap: 15px;
+  }
 }

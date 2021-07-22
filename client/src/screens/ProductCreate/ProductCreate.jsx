@@ -4,7 +4,7 @@ import { createGnome } from '../../services/gnomes.js'
 import Layout from '../../components/Layout/Layout.jsx'
 import './ProductCreate.css'
 
-function ProductCreate() {
+function ProductCreate(props) {
 
   const [gnome, setGnome] = useState( {
     name: '',

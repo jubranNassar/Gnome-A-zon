@@ -46,60 +46,70 @@ function ProductEdit(props) {
   return (
     <Layout user={props.user}>
       <div className="product-edit">
-        <div className="image-holder">
-          <img className="edit-image" src={gnome.image_url} alt={gnome.name} />
-        </div>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="edit-name">Name:</label>
-          <input
-            id="edit-name"
-            value={gnome.name}
-            name="name"
-            required
-            onChange={handleChange}
-          />
+        <div className="border">
+          <div className="edit-card">
+            <div className="image-holder">
+              <img
+                className="edit-image"
+                src={gnome.image_url}
+                alt={gnome.name}
+              />
+            </div>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="edit-name">Name:</label>
+              <input
+                id="edit-name"
+                value={gnome.name}
+                name="name"
+                required
+                onChange={handleChange}
+              />
 
-          <label htmlFor="edit-price">Price:</label>
-          <input
-            id="edit-price"
-            value={gnome.price}
-            name="price"
-            required
-            onChange={handleChange}
-          />
-          <label htmlFor="edit-details">Details:</label>
-          <input
-            id="edit-details"
-            value={gnome.details}
-            required
-            onChange={handleChange}
-          />
-          <label htmlFor="edit-image-url">image URL:</label>
-          <input
-            id="edit-image-url"
-            value={gnome.image_url}
-            name="image_url"
-            required
-            onChange={handleChange}
-          />
-          <label htmlFor="edit-material">Material:</label>
-          <input
-            id="edit-material"
-            value={gnome.materials}
-            name="materials"
-            required
-            onChange={handleChange}
-          />
-          <label htmlFor="edit-collection">Collection:</label>
-          <input
-            id="edit-collection"
-            value={gnome.category}
-            name="category"
-            required
-            onChange={handleChange}
-          />
-          <button type="submit" className="save-button">Save Changes</button>
-        </form>
+              <label htmlFor="edit-price">Price:</label>
+              <input
+                id="edit-price"
+                value={gnome.price}
+                name="price"
+                required
+                onChange={handleChange}
+              />
+              <label htmlFor="edit-details">Details:</label>
+              <input
+                id="edit-details"
+                value={gnome.details}
+                required
+                onChange={handleChange}
+              />
+              <label htmlFor="edit-image-url">image URL:</label>
+              <input
+                id="edit-image-url"
+                value={gnome.image_url}
+                name="image_url"
+                required
+                onChange={handleChange}
+              />
+              <label htmlFor="edit-material">Material:</label>
+              <input
+                id="edit-material"
+                value={gnome.materials}
+                name="materials"
+                required
+                onChange={handleChange}
+              />
+              <label htmlFor="edit-collection">Collection:</label>
+              <input
+                id="edit-collection"
+                value={gnome.category}
+                name="category"
+                required
+                onChange={handleChange}
+              />
+              <button type="submit" className="save-button">
+                Save Changes
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </Layout>
   );
