@@ -18,15 +18,15 @@ function App() {
   return (
     <div className="App">
       <Route exact path = '/'>
-        < Home />
+        < Home user={user} />
       </Route>
 
       <Route exact path = '/gnomes'>
-        <Products />
+        <Products user={user} />
       </Route>
 
       <Route path = '/gnomes/:id'>
-        < ProductDetails />
+        < ProductDetails user={user}/>
       </Route>
 
       <Route path = "/edit/:id">
@@ -38,15 +38,15 @@ function App() {
       </Route>
 
       <Route exact path = "/sign-up">
-        < SignUp setUser={setUser}/>
+        < SignUp setUser={setUser} user={user}/>
       </Route>
 
       <Route exact path = "/sign-in">
-        < SignIn setUser={setUser}/>
+        < SignIn setUser={setUser} user={user}/>
       </Route>
 
       <Route exact path = "/sign-out">
-        < SignOut />
+        < SignOut setUser={user}/>
       </Route>
     </div>
   );
