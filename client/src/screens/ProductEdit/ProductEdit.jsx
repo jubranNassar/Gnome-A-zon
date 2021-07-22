@@ -58,9 +58,8 @@ function ProductEdit(props) {
             required
             onChange={handleChange}
           />
-        </form>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="edit-price">Price:</label>
+
+          <label htmlFor="edit-price">Price:</label>
           <input
             id="edit-price"
             value={gnome.price}
@@ -68,18 +67,14 @@ function ProductEdit(props) {
             required
             onChange={handleChange}
           />
-        </form>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="edit-details">Details:</label>
+          <label htmlFor="edit-details">Details:</label>
           <input
             id="edit-details"
             value={gnome.details}
             required
             onChange={handleChange}
           />
-        </form>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="edit-image-url">image URL:</label>
+          <label htmlFor="edit-image-url">image URL:</label>
           <input
             id="edit-image-url"
             value={gnome.image_url}
@@ -87,9 +82,7 @@ function ProductEdit(props) {
             required
             onChange={handleChange}
           />
-        </form>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="edit-material">Material:</label>
+          <label htmlFor="edit-material">Material:</label>
           <input
             id="edit-material"
             value={gnome.materials}
@@ -97,9 +90,7 @@ function ProductEdit(props) {
             required
             onChange={handleChange}
           />
-        </form>
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="edit-collection">Collection:</label>
+          <label htmlFor="edit-collection">Collection:</label>
           <input
             id="edit-collection"
             value={gnome.category}
@@ -107,6 +98,7 @@ function ProductEdit(props) {
             required
             onChange={handleChange}
           />
+          <button type="submit" className="save-button">Save Changes</button>
         </form>
       </div>
     </Layout>
