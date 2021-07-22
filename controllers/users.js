@@ -76,4 +76,19 @@ export const verify = async (req, res) => {
   }
 }
 
+export const getUser = async (req, res) => {
+  try {
+    const { id } = req.body;
+    const user = await User.findById(id);
+    if(user) {
+      return res.json(user);
+    }
+    res.status(404).json( {message: 'User not found!'});
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({error: error.message});
+  }
+  
+}
+
 export const changePassword = async (req, res) => {}
