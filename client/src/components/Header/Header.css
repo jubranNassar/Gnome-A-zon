@@ -7,6 +7,12 @@
   height: 16.3rem;
 }
 
+#dabber_logo{
+  width: 40rem;
+  border-color: #8FC25E;
+  
+}
+
 .title {
   font-family: 'Dancing Script', cursive;
   font-size: 4rem;
