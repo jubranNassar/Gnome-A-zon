@@ -13,7 +13,7 @@ function Header(props) {
         </div>
       </div>
       <div className="title">
-        <p>Gnome -</p> <img src="../../images/Dabbing_Gnome.png" alt="gnome" /> <p>- Zon</p>
+        <p>Gnome - A - Zon</p>
       </div>
       <Nav user={props.user}/>
     </div>
