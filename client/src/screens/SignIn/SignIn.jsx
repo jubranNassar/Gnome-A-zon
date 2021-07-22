@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './SignIn.css'
 import { signIn } from '../../services/users'
 import { useHistory } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout.jsx';
+
 
 const SignIn = (props) => {
   const history = useHistory()
@@ -54,44 +56,47 @@ const SignIn = (props) => {
   const { email, password } = form
 
   return (
-    <div className='forms-screen'>
-      <div className='sign-in-forms-card'>
-        <h3 className='form-title'>Sign In</h3>
-        <form onSubmit={onSignIn} className='auth-form'>
+    <Layout user={props.user}>
 
-          <div className='form-label-input-div'>
-            <div className="label-div">
-              <label>Email:</label>
-            </div>
-            <input
-              required
-              type='text'
-              name='email'
-              className= 'form-input'
-              value={email}
-              placeholder='Enter Email'
-              onChange={handleChange}
-            />
-          </div>
+      <div className='forms-screen'>
+        <div className='sign-in-forms-card'>
+          <h3 className='form-title'>Sign In</h3>
+          <form onSubmit={onSignIn} className='auth-form'>
 
-          <div className='form-label-input-div'>
-            <div className="label-div">
-              <label>Password:</label>
+            <div className='form-label-input-div'>
+              <div className="label-div">
+                <label>Email:</label>
+              </div>
+              <input
+                required
+                type='text'
+                name='email'
+                className= 'form-input'
+                value={email}
+                placeholder='Enter Email'
+                onChange={handleChange}
+              />
             </div>
-            <input
-              required
-              name='password'
-              className= 'form-input'
-              value={password}
-              type='password'
-              placeholder='Password'
-              onChange={handleChange}
-            />
-          </div>
+
+            <div className='form-label-input-div'>
+              <div className="label-div">
+                <label>Password:</label>
+              </div>
+              <input
+                required
+                name='password'
+                className= 'form-input'
+                value={password}
+                type='password'
+                placeholder='Password'
+                onChange={handleChange}
+              />
+            </div>
           {renderError()}
         </form>
       </div>
     </div>
+    </Layout>
   )
 }
 
