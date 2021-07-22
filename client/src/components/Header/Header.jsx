@@ -1,6 +1,6 @@
 import Nav from "../Nav/Nav.jsx";
 import './Header.css'
-import Dabber from "../../images/dabber-logo-final2.jpg";
+import Dabber from "../../images/dabberlogogreen.jpg";
 
 function Header(props) {
   return (
@@ -14,7 +14,7 @@ function Header(props) {
         </div>
       </div>
       <div className="title">
-        <p>Gnome - < img id="dabber_logo" src= {Dabber}/> - Zon</p>
+        < img id="dabber_logo" src= {Dabber}/> 
         
       </div>
       <Nav user={props.user}/>
