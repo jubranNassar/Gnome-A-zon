@@ -11,12 +11,11 @@ const Products = (props) => {
     const fetchProducts = async () => {
       const allProducts = await getGnomes();
       setProducts(allProducts);
-      console.log("Items", allProducts);
     };
     fetchProducts();
   }, []);
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="product-page test">
         <div className="product-heading">
           <p>Gnomes Seeking Homes</p>

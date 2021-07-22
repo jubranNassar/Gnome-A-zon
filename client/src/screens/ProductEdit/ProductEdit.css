@@ -1,0 +1,28 @@
+.product-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../../images/detailScreenImage.jpeg);
+  background-position:center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+.edit-card {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  background-color: #8FC25E;
+  background: rgba(143, 194, 94, 0.7);
+  width: 65vw;
+  height: 55vh;
+  min-height: 350px;
+}
+
+.edit-image {
+  width: 500px;
+}

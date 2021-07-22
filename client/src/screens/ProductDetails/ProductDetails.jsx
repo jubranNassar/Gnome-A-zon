@@ -24,16 +24,17 @@ function GnomeDetails(props) {
   }
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="product-info">
         <div className="border">
           <div className="details-card">
-            
+            <div className="img-div">
             <img
               className="details-img"
               src={gnome.image_url}
               alt={gnome.name}
             />
+            </div>
             <div className="details">
               <div className="labels">
                 <div className="name-and-price">
