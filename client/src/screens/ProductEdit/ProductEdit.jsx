@@ -44,7 +44,7 @@ function ProductEdit(props) {
   }
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="product-edit">
         <div className="image-holder">
           <img className="edit-image" src={gnome.image_url} alt={gnome.name} />

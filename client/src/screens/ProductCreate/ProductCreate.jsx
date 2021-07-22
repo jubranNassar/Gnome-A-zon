@@ -45,7 +45,7 @@ function ProductCreate() {
   }
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className='forms-screen'>
         <div className='forms-card'>
           <h3 className='form-title'>Sell a Gnome</h3>

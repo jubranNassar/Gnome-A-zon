@@ -24,7 +24,7 @@ function GnomeDetails(props) {
   }
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="product-info">
         <div className="border">
           <div className="details-card">
