@@ -1,6 +1,6 @@
 import Nav from "../Nav/Nav.jsx";
 import './Header.css'
-import Dabber from "../../images/Dabber_gnome_green.jpg";
+import Dabber from "../../images/dabber-logo-final2.jpg";
 
 function Header(props) {
   return (
