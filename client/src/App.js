@@ -46,7 +46,7 @@ function App() {
       </Route>
 
       <Route exact path = "/sign-out">
-        < SignOut setUser={user}/>
+        < SignOut setUser={setUser}/>
       </Route>
     </div>
   );
