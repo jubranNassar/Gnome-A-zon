@@ -46,19 +46,19 @@ function ProductCreate() {
 
   return (
     <Layout>
-      <div className='forms-screen'>
-        <div className='forms-card'>
-          <h3 className='form-title'>Sell a Gnome</h3>
-          <form className='create-form' onSubmit={handleSubmit}>
+      <div className='forms-screen-pc'>
+        <div className='forms-card-pc'>
+          <h3 className='form-title-pc'>Sell a Gnome</h3>
+          <form className='create-form-pc' onSubmit={handleSubmit}>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-pc'>
+              <div className="label-div-pc">
                   <label htmlFor="name-input">Gnome Name:</label>
                 </div>
               <input 
                 type="text" 
                 id="name-input"
-                className="name-input form-input"
+                className="name-input form-input-pc"
                 name="name"
                 value={gnome.name}
                 onChange={handleChange}
@@ -67,14 +67,14 @@ function ProductCreate() {
               />
             </div>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-pc'>
+              <div className="label-div-pc">
                 <label htmlFor="price-input">Price: </label>
               </div>
               <input
-                  type="text" 
+                type="text" 
                 id="price-input"
-                className="price-input form-input"
+                className="price-input-pc form-input-pc"
                 name="price"
                 value={gnome.price}
                 onChange={handleChange}
@@ -82,13 +82,13 @@ function ProductCreate() {
               />
             </div>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-pc'>
+              <div className="label-div-pc">
                 <label htmlFor="details-input">Details: </label>
               </div>
               <textarea 
                 id="details-input"
-                className="details-input form-input"
+                className="details-input-pc form-input-pc"
                 name="details"
                 rows = "4"
                 value={gnome.details}
@@ -97,14 +97,14 @@ function ProductCreate() {
               />
             </div>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-pc'>
+              <div className="label-div-pc">
                 <label htmlFor="imageURL-input">Image URL: </label>
               </div>
               <input 
                 type="text" 
                 id="imageURL-input"
-                className="imageURL-input form-input"
+                className="imageURL-input-pc form-input-pc"
                 name="image_url"
                 value={gnome.image_url}
                 onChange={handleChange}
@@ -112,14 +112,14 @@ function ProductCreate() {
             />
             </div>
 
-            <div className='form-label-input-div'>  
-              <div className="label-div">   
+            <div className='form-label-input-div-pc'>  
+              <div className="label-div-pc">   
                 <label htmlFor="materials-input">Materials: </label>
               </div>
               <input
                 type="text" 
                 id="materials-input"
-                className="materials-input form-input"
+                className="materials-input-pc form-input-pc"
                 name="materials"
                 value={gnome.materials}
                 onChange={handleChange}
@@ -127,21 +127,21 @@ function ProductCreate() {
               />
             </div> 
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-pc'>
+              <div className="label-div-pc">
                 <label htmlFor="category-input">Category: </label>
               </div>
               <input
                 type="text" 
                 id="category-input"
-                className="category-input form-input"
+                className="category-input-pc form-input-pc"
                 name="category"
                 value={gnome.category}
                 onChange={handleSelect}
                 required
               />
             </div>
-            <button type="submit" className="form-submit-button">Submit</button>
+            <button type="submit" className="form-submit-button-pc">Submit</button>
           </form>
         </div>
       </div>
