@@ -4,7 +4,7 @@ import { createGnome } from '../../services/gnomes.js'
 import Layout from '../../components/Layout/Layout.jsx'
 import './ProductCreate.css'
 
-function ProductCreate() {
+function ProductCreate(props) {
 
   const [gnome, setGnome] = useState( {
     name: '',
@@ -45,11 +45,13 @@ function ProductCreate() {
   }
 
   return (
+
     <Layout>
       <div className='forms-screen-pc'>
         <div className='forms-card-pc'>
           <h3 className='form-title-pc'>Sell a Gnome</h3>
           <form className='create-form-pc' onSubmit={handleSubmit}>
+
 
             <div className='form-label-input-div-pc'>
               <div className="label-div-pc">
