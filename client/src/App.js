@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { verifyUser } from "./services/users";
 import { Route } from 'react-router-dom';
 import Home from './screens/Home/Home.jsx';
 import Products from './screens/Products/Products.jsx';
