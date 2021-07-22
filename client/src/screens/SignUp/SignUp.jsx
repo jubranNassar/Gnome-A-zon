@@ -43,7 +43,7 @@ const SignUp = (props) => {
   }
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger form-submit-button' : 'form-submit-button'
+    const toggleForm = form.isError ? 'danger form-submit-button-su' : 'form-submit-button-su'
     if (form.isError) {
       return (
         <button type='submit' className={toggleForm}>
@@ -51,7 +51,7 @@ const SignUp = (props) => {
         </button>
       )
     } else {
-      return <button type='submit' className='form-submit-button'>Sign Up</button>
+      return <button type='submit' className='form-submit-button-su'>Sign Up</button>
     }
   }
 
@@ -59,43 +59,43 @@ const SignUp = (props) => {
 
   return (
     <Layout user={props.user}>
-      <div className='forms-screen'>
-        <div className='auth-forms-card'>
-          <h3 className='form-title'>Sign Up</h3>
-          <form onSubmit={onSignUp} className='auth-form'>
+      <div className='forms-screen-su'>
+        <div className='auth-forms-card-su'>
+          <h3 className='form-title-su'>Sign Up</h3>
+          <form onSubmit={onSignUp} className='auth-form-su'>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-su'>
+              <div className="label-div-su">
                 <label>Username:</label>
               </div>
               <input
               required
               type='text'
               name='username'
-              className= 'form-input'
+              className= 'form-input-su'
               value={username}
               placeholder='Enter username'
               onChange={handleChange}
               />
             </div>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-su'>
+              <div className="label-div-su">
                 <label>Email address:</label>
               </div>
               <input
                 required
                 type='email'
                 name='email'
-                className= 'form-input'
+                className= 'form-input-su'
                 value={email}
                 placeholder='Enter email'
                 onChange={handleChange}
               />
             </div>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-su'>
+              <div className="label-div-su">
                 <label>Password:</label>
               </div>
               <input
@@ -103,20 +103,20 @@ const SignUp = (props) => {
                 name='password'
                 value={password}
                 type='password'
-                className= 'form-input'
+                className= 'form-input-su'
                 placeholder='Password'
                 onChange={handleChange}
               />
             </div>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-su'>
+              <div className="label-div-su">
                 <label>Confirm Password:</label>
               </div>
               <input
                 required
                 name='passwordConfirmation'
-                className= 'form-input'
+                className= 'form-input-su'
                 value={passwordConfirmation}
                 type='password'
                 placeholder='Confirm Password'

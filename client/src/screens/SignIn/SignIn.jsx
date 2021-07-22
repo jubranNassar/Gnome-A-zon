@@ -41,7 +41,7 @@ const SignIn = (props) => {
   }
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger form-submit-button' : 'form-submit-button'
+    const toggleForm = form.isError ? 'danger form-submit-button-si' : 'form-submit-button-si'
     if (form.isError) {
       return (
         <button type='submit' className={toggleForm}>
@@ -49,7 +49,7 @@ const SignIn = (props) => {
         </button>
       )
     } else {
-      return <button type='submit' className='form-submit-button'>Sign In</button>
+      return <button type='submit' className='form-submit-button-si'>Sign In</button>
     }
   }
 
@@ -58,34 +58,34 @@ const SignIn = (props) => {
   return (
     <Layout user={props.user}>
 
-      <div className='forms-screen'>
-        <div className='sign-in-forms-card'>
-          <h3 className='form-title'>Sign In</h3>
-          <form onSubmit={onSignIn} className='auth-form'>
+      <div className='forms-screen-si'>
+        <div className='sign-in-forms-card-si'>
+          <h3 className='form-title-si'>Sign In</h3>
+          <form onSubmit={onSignIn} className='auth-form-si'>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-si'>
+              <div className="label-div-si">
                 <label>Email:</label>
               </div>
               <input
                 required
                 type='text'
                 name='email'
-                className= 'form-input'
+                className= 'form-input-si'
                 value={email}
                 placeholder='Enter Email'
                 onChange={handleChange}
               />
             </div>
 
-            <div className='form-label-input-div'>
-              <div className="label-div">
+            <div className='form-label-input-div-si'>
+              <div className="label-div-si">
                 <label>Password:</label>
               </div>
               <input
                 required
                 name='password'
-                className= 'form-input'
+                className= 'form-input-si'
                 value={password}
                 type='password'
                 placeholder='Password'
