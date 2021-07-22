@@ -15,7 +15,7 @@ function Header(props) {
       <div className="title">
         <p>Gnome - A - Zon</p>
       </div>
-      <Nav />;
+      <Nav user={props.user}/>
     </div>
   );
 }

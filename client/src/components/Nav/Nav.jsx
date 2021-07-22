@@ -20,13 +20,19 @@ const alwaysOptions = (
     <NavLink className="link" to="/gnomes">Gnomes</NavLink>
   </>
 );
+
+const upperCase = (username) =>{
+let userArr = username.split('')
+userArr[0] = userArr[0].toUpperCase()
+return userArr.join('')
+}
 function Nav({ user }) {
   return (
     <nav>
       <div className="nav-container">
       <div className="nav">
         <div className="links">
-          {user && <div className="link welcome">Welcome, {user.username}</div>}
+          {user && <div className="link welcome">Welcome, {upperCase(user.username)}</div>}
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
