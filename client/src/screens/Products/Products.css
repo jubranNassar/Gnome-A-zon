@@ -3,11 +3,12 @@ a {
   color: #000;
 }
 .products-container {
-  display: grid;
+  display: flex;
   grid-gap: 10rem 10rem;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
   flex-wrap: wrap;
-  }
+  max-width:1400px;
+}
 
 .product-heading {
   background-color: #8fc25e;
@@ -17,9 +18,11 @@ a {
   margin: 3rem 0;
   padding: 1rem 0;
   text-align: center;
-  width: 111.7rem;
+  width: 68vw;
+  max-width:1400px;
 
-  animation: fadeInAnimation ease 2s;
+
+animation: fadeInAnimation ease 2s;
 animation-iteration-count: 1;
 animation-fill-mode: forwards;
 }
@@ -41,8 +44,6 @@ animation-fill-mode: forwards;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  height: 0;
-  padding-bottom: 65.89%;
   flex-direction: column;
   z-index: -1;
 }
