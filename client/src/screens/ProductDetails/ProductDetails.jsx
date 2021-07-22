@@ -12,7 +12,6 @@ function GnomeDetails(props) {
   useEffect(() => {
     const fetchGnome = async () => {
       const gnome = await getGnome(id);
-      console.log("detail", gnome);
       setGnome(gnome);
       setLoaded(gnome);
     };
@@ -28,63 +27,68 @@ function GnomeDetails(props) {
       <div className="product-info">
         <div className="border">
           <div className="details-card">
-            <div className="img-div">
-            <img
-              className="details-img"
-              src={gnome.image_url}
-              alt={gnome.name}
-            />
-            </div>
-            <div className="details">
-              <div className="labels">
-                <div className="name-and-price">
-                <div id="name">{gnome.name}</div>
-                <div id="price">${gnome.price}</div>
+            <div id="name">{gnome.name}</div>
+            <div className="image-and-details">
+              <div className="img-div">
+                <img
+                  className="details-img"
+                  src={gnome.image_url}
+                  alt={gnome.name}
+                />
               </div>
-              <div className="text">
-              </div>
-              </div>
-              <div className="label-input">
-                <div className="labels">
-                  <label
-                    htmlFor="description"
-                    className="details-label"
-                    id="desc-label"
-                  >
-                    Details:
-                  </label>
+              <div className="details">
+                <div className="label-input">
+                  <div className="labels">
+                    <label htmlFor="price">Price:</label>
+                  </div>
+                  <div className="text">
+                    <div id="price">${gnome.price}</div>
+                  </div>
                 </div>
-                <div className="text">
-                  <div id="description">{gnome.details}</div>
+
+                <div className="label-input">
+                  <div className="labels">
+                    <label
+                      htmlFor="description"
+                      className="details-label"
+                      id="desc-label"
+                    >
+                      Details:
+                    </label>
+                  </div>
+                  <div className="text">
+                    <div id="description">{gnome.details}</div>
+                  </div>
                 </div>
-              </div>
-              <div className="label-input">
-                <div className="labels">
-                  <label htmlFor="materials" className="details-label">
-                    Materials:
-                  </label>
-                </div>
-                <div className="text">
-                  <div id="materials">{gnome.materials}</div>
-                </div>
-              </div>
-              <div className="label-input">
-                <div className="labels">
-                  <label htmlFor="collection" className="details-label">
-                    Collection:
-                  </label>
-                </div>
-                <div className="text">
-                  <div id="collection">{gnome.category}</div>
-                </div>
-              </div>
-              <div id="buttons">
-                <Link to={`/edit/${gnome._id}`}>
-                  <button id="edit">Edit</button>
-                </Link>
-                <button id="delete" onClick={() => deleteGnome(gnome._id)}>
-                  Delete
-                </button>
+
+                  <div className="label-input">
+                    <div className="labels">
+                      <label htmlFor="materials" className="details-label">
+                        Materials:
+                      </label>
+                    </div>
+                    <div className="text">
+                      <div id="materials">{gnome.materials}</div>
+                    </div>
+                  </div>
+                  <div className="label-input">
+                    <div className="labels">
+                      <label htmlFor="collection" className="details-label">
+                        Collection:
+                      </label>
+                    </div>
+                    <div className="text">
+                      <div id="collection">{gnome.category}</div>
+                    </div>
+                  </div>
+                  <div id="buttons">
+                    <Link to={`/edit/${gnome._id}`}>
+                      <button id="edit">Edit</button>
+                    </Link>
+                    <button id="delete" onClick={() => deleteGnome(gnome._id)}>
+                      Delete
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
