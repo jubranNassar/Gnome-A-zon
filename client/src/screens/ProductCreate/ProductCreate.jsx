@@ -13,7 +13,7 @@ function ProductCreate(props) {
     image_url: '',
     category: [],
     materials: '',
-    seller: ''
+    seller: props.user ? props.user.username : null
   });
 
   const [isCreated, setCreated] = useState(false);
