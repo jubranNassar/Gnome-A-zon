@@ -4,7 +4,7 @@ a {
 }
 .products-container {
   display: grid;
-  grid-gap: 15rem;
+  grid-gap: 10rem 10rem;
   grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
   }
@@ -17,7 +17,7 @@ a {
   margin: 3rem 0;
   padding: 1rem 0;
   text-align: center;
-  width: 121.3rem;
+  width: 111.7rem;
 
   animation: fadeInAnimation ease 2s;
 animation-iteration-count: 1;
