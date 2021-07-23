@@ -1,7 +1,10 @@
 .home {
   background-image: url("../../images/gmoneByTree.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  height: 120vh;
+  height: 100vw;
 }
 
 .home_inner {
@@ -105,6 +108,10 @@
     padding-top: 5rem;
     font-size: 2.5rem;
   }
+  /* .home {
+    background-size: contain;
+    height: 100%;
+  } */
 }
 
 @media (max-width: 1130px) {
@@ -112,7 +119,9 @@
     font-size: 2.5rem;
     margin-left: 16.5rem;
   }
+  
 }
+
 
 @media (max-width: 980px) {
   .home_button {
@@ -147,6 +156,9 @@
 }
 
 @media (max-width: 648px) {
+  .home {
+    height: 120vh;
+  }
   .home_button {
     font-size: 1.5rem;
     margin-left: 10.5rem;
@@ -159,6 +171,11 @@
   .subtext_home_text {
     padding-top: 5rem;
     font-size: 1.8rem;
+  }
+  .welcome_home_card {
+    
+    margin-top: 0.2rem;
+    margin-left: 0.8rem;
   }
 }
 
