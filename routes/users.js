@@ -6,7 +6,7 @@ const router = Router();
 router.post('/sign-up', controllers.signUp);
 router.post('/sign-in', controllers.signIn);
 router.get('/verify', controllers.verify);
-router.get('/get-user', controllers.getUser);
+router.get('/get-user/:username', controllers.getUser);
 router.post('/change-password', controllers.changePassword);
 
 export default router;

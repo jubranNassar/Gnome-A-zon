@@ -81,7 +81,7 @@ export const verify = async (req, res) => {
 
 export const getUser = async (req, res) => {
   try {
-    const { username } = req.body;
+    const { username } = req.params;
     const user_info = await User.findOne({ username: username }).select(
       'username email');
     if(user_info) {

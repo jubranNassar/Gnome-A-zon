@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import "./ProductDetails.css";
 import { getGnome, deleteGnome } from "../../services/gnomes";
+import { getUser } from "../../services/users";
 import Layout from "../../components/Layout/Layout.jsx";
 import { useParams, Link } from "react-router-dom";
 
 function GnomeDetails(props) {
-  const [gnome, setGnome] = useState([]);
+  const [gnome, setGnome] = useState({});
   const [loaded, setLoaded] = useState(true);
+  const [seller, setSeller] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
@@ -14,9 +16,21 @@ function GnomeDetails(props) {
       const gnome = await getGnome(id);
       setGnome(gnome);
       setLoaded(gnome);
-    };
+    }
+
     fetchGnome();
   }, [id]);
+
+  useEffect(()=> {
+    const fetchSeller = async () => {
+      if(gnome && Object.keys(gnome).length!==0) {
+        const vendor = getUser(gnome.seller);
+        console.log(vendor);
+        setSeller(vendor);
+      }
+    }
+    fetchSeller();
+  }, [gnome]);
 
   if (!loaded) {
     return <h1>Loading...</h1>;
