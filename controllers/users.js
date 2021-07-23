@@ -3,8 +3,11 @@ import jwt from 'jsonwebtoken'
 
 import User from '../models/user.js'
 
-const SALT_ROUNDS = process.env.SALT_ROUNDS || 11
-const TOKEN_KEY = process.env.TOKEN_KEY || '$@1+yGnOme$'
+const SALT_ROUNDS = Number(process.env.SALT_ROUNDS) || 11
+
+const TOKEN_KEY = process.env.NODE_ENV === 'production' 
+  ? process.env.TOKEN_KEY 
+  : '$@1+yGnOme$';
 
 // for JWT expiration
 const today = new Date()
@@ -78,10 +81,11 @@ export const verify = async (req, res) => {
 
 export const getUser = async (req, res) => {
   try {
-    const { id } = req.body;
-    const user = await User.findById(id);
-    if(user) {
-      return res.json(user);
+    const { username } = req.body;
+    const user_info = await ser.findOne({ username: username }).select(
+      'username email');
+    if(user_info) {
+      return res.json(user_info);
     }
     res.status(404).json( {message: 'User not found!'});
   } catch (error) {
