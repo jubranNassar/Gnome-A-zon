@@ -63,3 +63,21 @@ animation-fill-mode: forwards;
   transition-timing-function: ease-in;
   transition: 0.2s;
 }
+
+@media (max-width:850px) {
+  .product-card {
+    width: 28rem;
+  }
+}
+
+@media (max-width: 645px) {
+  .product-card {
+    width: 26rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .product-card {
+    width: 23rem;
+  }
+}
