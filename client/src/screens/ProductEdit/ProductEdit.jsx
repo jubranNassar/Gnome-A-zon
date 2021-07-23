@@ -48,66 +48,103 @@ function ProductEdit(props) {
       <div className="product-edit">
         <div className="border">
           <div className="edit-card">
-            <div className="image-holder">
-              <img
-                className="edit-image"
-                src={gnome.image_url}
-                alt={gnome.name}
-              />
+            <div className="form">
+              <form className="form" onSubmit={handleSubmit}>
+                <div className="name-edit">
+                  <input
+                    id="edit-name"
+                    value={gnome.name}
+                    name="name"
+                    required
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="image-and-form">
+                  <div className="image-holder">
+                    <img
+                      className="edit-image"
+                      src={gnome.image_url}
+                      alt={gnome.name}
+                    />
+                  </div>
+                  <div className="edit-form-inputs">
+                    <div className="edit-label-input">
+                      <div className="edit-label">
+                        <label htmlFor="edit-price">Price:</label>
+                      </div>
+                      <div className="edit-text">
+                        <input
+                          id="edit-price"
+                          value={gnome.price}
+                          name="price"
+                          required
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="edit-label-input">
+                      <div className="edit-label">
+                        <label htmlFor="edit-details">Details:</label>
+                      </div>
+                      <div className="edit-text">
+                        <textarea
+                          rows={5}
+                          id="edit-details"
+                          value={gnome.details}
+                          required
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="edit-label-input">
+                      <div className="edit-label">
+                        <label htmlFor="edit-image-url">image URL:</label>
+                      </div>
+                      <div className="edit-text">
+                        <input
+                          id="edit-image-url"
+                          value={gnome.image_url}
+                          name="image_url"
+                          required
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="edit-label-input">
+                      <div className="edit-label">
+                        <label htmlFor="edit-material">Material:</label>
+                      </div>
+                      <div className="edit-text">
+                        <input
+                          id="edit-material"
+                          value={gnome.materials}
+                          name="materials"
+                          required
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="edit-label-input" id="collection-input">
+                      <label id="collection-label" htmlFor="edit-collection">Collection:</label>
+                      <div className="edit-text">
+                        <div className="collection-and-button">
+                          <input
+                            id="edit-collection"
+                            value={gnome.category}
+                            name="category"
+                            required
+                            onChange={handleChange}
+                          />
+                          <button type="submit" className="save-button">
+                            Save Changes
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="edit-name">Name:</label>
-              <input
-                id="edit-name"
-                value={gnome.name}
-                name="name"
-                required
-                onChange={handleChange}
-              />
-
-              <label htmlFor="edit-price">Price:</label>
-              <input
-                id="edit-price"
-                value={gnome.price}
-                name="price"
-                required
-                onChange={handleChange}
-              />
-              <label htmlFor="edit-details">Details:</label>
-              <input
-                id="edit-details"
-                value={gnome.details}
-                required
-                onChange={handleChange}
-              />
-              <label htmlFor="edit-image-url">image URL:</label>
-              <input
-                id="edit-image-url"
-                value={gnome.image_url}
-                name="image_url"
-                required
-                onChange={handleChange}
-              />
-              <label htmlFor="edit-material">Material:</label>
-              <input
-                id="edit-material"
-                value={gnome.materials}
-                name="materials"
-                required
-                onChange={handleChange}
-              />
-              <label htmlFor="edit-collection">Collection:</label>
-              <input
-                id="edit-collection"
-                value={gnome.category}
-                name="category"
-                required
-                onChange={handleChange}
-              />
-              <button type="submit" className="save-button">
-                Save Changes
-              </button>
-            </form>
           </div>
         </div>
       </div>
