@@ -72,7 +72,7 @@ function Nav({ user }) {
           <div className="nav">
             <div className="links">
               {user && (
-                <div className="link welcome">
+                <div className="link welcome shrink">
                   Welcome, {upperCase(user.username)}
                 </div>
               )}

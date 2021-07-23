@@ -1,5 +1,5 @@
 .header {
-  background-color: #8FC25E;
+  background-color: #8fc25e;
   border-bottom: 2px solid #454021;
   display: flex;
   flex-direction: column;
@@ -7,27 +7,25 @@
   height: 20.2rem;
 }
 
-#dabber_logo{
+#dabber_logo {
   width: 40rem;
-  border-color: #8FC25E;
-  
+  border-color: #8fc25e;
 }
 
 .title {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   /* font-size: 4rem; */
   text-align: center;
   /* padding:1rem 0; */
 }
-.quote-box{
+.quote-box {
   background-color: #454021;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   font-size: 1.2rem;
   justify-content: space-between;
   height: 5rem;
   padding: 1.5rem;
-
 }
 
 .quote {
@@ -35,7 +33,19 @@
 }
 
 @media (max-width: 426px) {
-.location {
-  display: none;
+  .location {
+    display: none;
+  }
+
+  #dabber_logo {
+    width: 30rem;
+    border-color: #8fc25e;
+  }
 }
+
+@media (max-width: 426px) {
+  #dabber_logo {
+    width: 25rem;
+    border-color: #8fc25e;
+  }
 }
