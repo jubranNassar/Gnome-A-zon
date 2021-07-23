@@ -42,7 +42,7 @@ export const verifyUser = async () => {
   return false
 }
 
-export const getUser = async (id) => {
-  const resp = await api.get('/sign-in', id);
+export const getUser = async (username) => {
+  const resp = await api.get('/sign-in', username);
   return resp.data;
 }
