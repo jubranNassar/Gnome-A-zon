@@ -8,6 +8,7 @@ a {
   grid-gap: 10rem 10rem;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 3rem;
   max-width: 1400px;
 }
 
@@ -101,5 +102,8 @@ a {
 @media (max-width: 380px) {
   .product-heading {
     font-size: 2.5rem;
+  }
+  .products-container {
+    padding:0;
   }
 }
