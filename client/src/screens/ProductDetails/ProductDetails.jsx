@@ -3,13 +3,14 @@ import "./ProductDetails.css";
 import { getGnome, deleteGnome } from "../../services/gnomes";
 import { getUser } from "../../services/users";
 import Layout from "../../components/Layout/Layout.jsx";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 
 function GnomeDetails(props) {
   const [gnome, setGnome] = useState({});
   const [loaded, setLoaded] = useState(true);
   const [seller, setSeller] = useState({});
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchGnome = async () => {
@@ -24,15 +25,17 @@ function GnomeDetails(props) {
   useEffect(()=> {
     const fetchSeller = async () => {
       if(gnome && Object.keys(gnome).length!==0) {
-        console.log(gnome.seller)
         const vendor = await getUser(gnome.seller);
-        console.log(vendor);
         setSeller(vendor);
-        console.log(seller);
       }
     }
     fetchSeller();
   }, [gnome]);
+
+  const handleDelete = async () => {
+    await deleteGnome(gnome._id);
+    history.push("/gnomes")
+  }
 
   const showUserOptions = () => {
     if(props.user && seller && Object.keys(seller).length!==0) {
@@ -42,7 +45,7 @@ function GnomeDetails(props) {
             <Link to={`/edit/${gnome._id}`}>
               <button className="btn-slide-left" id="edit">Edit</button>
             </Link>
-            <button id="delete" onClick={() => deleteGnome(gnome._id)}>
+            <button id="delete" onClick={handleDelete}>
               Delete
             </button>
           </div>
@@ -136,14 +139,6 @@ function GnomeDetails(props) {
                     </div>
                   </div>
                   {showUserOptions()}
-                  {/* <div id="buttons">
-                    <Link to={`/edit/${gnome._id}`}>
-                      <button className="btn-slide-left" id="edit">Edit</button>
-                    </Link>
-                    <button id="delete" onClick={() => deleteGnome(gnome._id)}>
-                      Delete
-                    </button>
-                  </div> */}
               </div>
             </div>
           </div>
