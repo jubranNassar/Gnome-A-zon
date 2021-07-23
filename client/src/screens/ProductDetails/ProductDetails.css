@@ -73,7 +73,6 @@
 }
 
 #price {
-  /* font-size: 24px; */
   margin: 0 15px;
 }
 
@@ -184,7 +183,6 @@
   display: flex;
   justify-content: flex-start;
   margin-left: 10px;
-
   padding: 10px;
   letter-spacing: 0.9px;
   width: 20vw;
