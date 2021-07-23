@@ -24,13 +24,53 @@ function GnomeDetails(props) {
   useEffect(()=> {
     const fetchSeller = async () => {
       if(gnome && Object.keys(gnome).length!==0) {
-        const vendor = getUser(gnome.seller);
+        console.log(gnome.seller)
+        const vendor = await getUser(gnome.seller);
         console.log(vendor);
         setSeller(vendor);
+        console.log(seller);
       }
     }
     fetchSeller();
   }, [gnome]);
+
+  const showUserOptions = () => {
+    if(props.user && seller && Object.keys(seller).length!==0) {
+      if(props.user.username===seller.username) {
+        return (
+          <div id="buttons">
+            <Link to={`/edit/${gnome._id}`}>
+              <button className="btn-slide-left" id="edit">Edit</button>
+            </Link>
+            <button id="delete" onClick={() => deleteGnome(gnome._id)}>
+              Delete
+            </button>
+          </div>
+        ) 
+      } else {
+        return (
+          <div className="seller-info-div">
+            <p>Sold by: {seller.username}</p>
+            <a href={"mailto: " +`${seller.email}`}>Email: {seller.email}</a>
+          </div>
+        )
+      }
+    } else if(!seller || Object.keys(seller).length===0) {
+      return (
+        <div className="seller-info-div">
+          Seller Not Found
+        </div>
+      )  
+    } else {
+      return (
+        <div id="buttons">
+          <p>Sold by: {seller.username}</p>
+          <p>Email: <a href={"mailto: " +`${seller.email}`}>{seller.email}</a></p>
+        </div>
+      )
+    }
+      
+  }
 
   if (!loaded) {
     return <h1>Loading...</h1>;
@@ -95,14 +135,15 @@ function GnomeDetails(props) {
                       <div id="collection">{gnome.category}</div>
                     </div>
                   </div>
-                  <div id="buttons">
+                  {showUserOptions()}
+                  {/* <div id="buttons">
                     <Link to={`/edit/${gnome._id}`}>
                       <button className="btn-slide-left" id="edit">Edit</button>
                     </Link>
                     <button id="delete" onClick={() => deleteGnome(gnome._id)}>
                       Delete
                     </button>
-                  </div>
+                  </div> */}
               </div>
             </div>
           </div>
