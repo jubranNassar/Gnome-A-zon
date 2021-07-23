@@ -50,6 +50,8 @@ a {
   z-index: -1;
 }
 
+.products-container::-webkit-scrollbar { width: 0 !important }
+
 .test {
   background-blend-mode: overlay;
 }
