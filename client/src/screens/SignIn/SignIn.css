@@ -28,6 +28,19 @@
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   padding: 2vh 0;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .form-label-input-div-si {
@@ -74,6 +87,19 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  transition: all 0.5s ease;
+}
+
+.btn-reg {
+  padding: 0.7em 1.5em;
+  border: none;
+  color: #fff;
+  background: #454021;
+  box-shadow: inset 0 0 0 0 #ff6633;
+}
+.btn-reg:hover {
+  box-shadow: inset 0 0 0 50px #dd4411;
 }
 
 textarea {

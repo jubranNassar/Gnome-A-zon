@@ -9,6 +9,19 @@
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 
@@ -35,23 +48,35 @@
 }
 
 .home_button {
-  background-color: #8FC25E;
+  /* background-color: #8FC25E; */
+  border: 2px solid #454021;
   margin-left: 18rem;
   margin-top: 1rem;
-  width: 18vw;
-  height: 8vh;
-  border: none;
-  outline:none; 
+  width: 17vw;
+  height: 8.5vh;
+  /* border: none; */
+  /* outline:none;  */
   border-radius: 4px;
   font-size:32px ;
   font-family: Open sans;
+
+  transition: all 0.5s ease;
+
   
 }
+.btn-slide-down {
+  background: linear-gradient(to bottom, #8FC25E 50%, #454021 50%);
+  background-size: 100% 201%;
+  background-position: left bottom;
+}
+.btn-slide-down:hover {
+  background-position: right top;
+}
 
-.home_button:hover {
+/* .home_button:hover {
   background-color: #454021;
   color: #F8FFF8 ;
-}
+} */
 
 @media (max-width: 1163px){
 .welcome_home_card{

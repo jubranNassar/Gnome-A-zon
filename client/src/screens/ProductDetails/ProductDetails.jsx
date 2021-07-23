@@ -83,7 +83,7 @@ function GnomeDetails(props) {
                   </div>
                   <div id="buttons">
                     <Link to={`/edit/${gnome._id}`}>
-                      <button id="edit">Edit</button>
+                      <button className="btn-slide-left" id="edit">Edit</button>
                     </Link>
                     <button id="delete" onClick={() => deleteGnome(gnome._id)}>
                       Delete
