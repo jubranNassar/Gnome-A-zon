@@ -82,7 +82,7 @@ export const verify = async (req, res) => {
 export const getUser = async (req, res) => {
   try {
     const { username } = req.body;
-    const user_info = await ser.findOne({ username: username }).select(
+    const user_info = await User.findOne({ username: username }).select(
       'username email');
     if(user_info) {
       return res.json(user_info);
