@@ -29,7 +29,21 @@
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   padding: 2vh 0;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
 
 .form-label-input-div-pc {
   width: 50vw;
@@ -39,8 +53,6 @@
   justify-content: space-between;
   font-size: 2rem;
   margin-left: -7vw;
-  /* background-color: red; */
-
 }
 
 
@@ -67,6 +79,7 @@
   color: white;
   background-color: #454021;
   border: none;
+  border: 3px solid #454021;
   padding: 1vh;
   width: 12vw;
   font-family: 'Open Sans', sans-serif;
@@ -77,6 +90,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease;
+}
+
+.btn-slide-up {
+  background: linear-gradient(to bottom, #454021 50%, #9fda69f1 50%);
+  background-size: 100% 200%;
+  background-position: left top;
+}
+.btn-slide-up:hover {
+  background-position: right bottom;
 }
 
 textarea {

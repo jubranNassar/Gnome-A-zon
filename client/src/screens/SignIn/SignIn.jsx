@@ -49,7 +49,7 @@ const SignIn = (props) => {
         </button>
       )
     } else {
-      return <button type='submit' className='form-submit-button-si'>Sign In</button>
+      return <button type='submit' className='form-submit-button-si btn-reg'>Sign In</button>
     }
   }
 

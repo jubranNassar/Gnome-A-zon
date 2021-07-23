@@ -143,7 +143,7 @@ function ProductCreate(props) {
                 required
               />
             </div>
-            <button type="submit" className="form-submit-button-pc">Submit</button>
+            <button type="submit" className="form-submit-button-pc btn btn-slide-up">Submit</button>
           </form>
         </div>
       </div>

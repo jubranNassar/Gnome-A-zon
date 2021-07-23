@@ -27,6 +27,19 @@
   width: 68vw;
   height: 60vh;
   min-height: 350px;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .image-and-details {
@@ -93,6 +106,7 @@
   width: 20vw;
   gap: 15px;
   justify-content: space-between;
+
 }
 
 #edit {
@@ -109,6 +123,15 @@
   border-radius: 10px;
   cursor: pointer;
   padding: 2px;
+  
+  transition:all 0.5s ease;
+  background: linear-gradient(to left, #454021 50%, #8FC25E 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+#edit:hover {
+  background-position: left bottom;
 }
 
 #delete {
@@ -125,6 +148,16 @@
   border-radius: 10px;
   cursor: pointer;
   padding: 2px;
+
+  transition:all 0.5s ease;
+  background: linear-gradient(to right, #454021 50%, #8FC25E 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+}
+
+
+#delete:hover {
+  background-position: right bottom;
 }
 
 .label-input {
