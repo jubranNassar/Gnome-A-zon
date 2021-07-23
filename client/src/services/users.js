@@ -43,6 +43,6 @@ export const verifyUser = async () => {
 }
 
 export const getUser = async (username) => {
-  const resp = await api.get('/sign-in', username);
+  const resp = await api.get(`/get-user/${username}`);
   return resp.data;
 }
