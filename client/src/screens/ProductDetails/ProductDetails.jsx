@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "./ProductDetails.css";
 import { getGnome, deleteGnome } from "../../services/gnomes";
-import { getUser } from "../../services/users";
 import Layout from "../../components/Layout/Layout.jsx";
 import { useParams, Link } from "react-router-dom";
 
@@ -21,22 +20,12 @@ function GnomeDetails(props) {
     fetchGnome();
   }, [id]);
 
-  useEffect(()=> {
-    const fetchSeller = async () => {
-      if(gnome && Object.keys(gnome).length!==0) {
-        console.log(gnome.seller)
-        const vendor = await getUser(gnome.seller);
-        console.log(vendor);
-        setSeller(vendor);
-        console.log(seller);
-      }
-    }
-    fetchSeller();
-  }, [gnome]);
 
   const showUserOptions = () => {
-    if(props.user && seller && Object.keys(seller).length!==0) {
-      if(props.user.username===seller.username) {
+    console.log(gnome);
+    if(props.user && gnome && Object.keys(gnome).length!==0) {
+      if(props.user._userId===gnome.seller._id) {
+        console.log(gnome);
         return (
           <div id="buttons">
             <Link to={`/edit/${gnome._id}`}>
@@ -50,30 +39,29 @@ function GnomeDetails(props) {
       } else {
         return (
           <div className="seller-info-div">
-            <p>Sold by: {seller.username}</p>
-            <a href={"mailto: " +`${seller.email}`}>Email: {seller.email}</a>
+            <p>Sold by: {gnome.seller.username}</p>
+            <a href={"mailto: " +`${gnome.seller.email}`}>Email: {gnome.seller.email}</a>
           </div>
         )
-      }
-    } else if(!seller || Object.keys(seller).length===0) {
+      } 
+    } else if(gnome && Object.keys(gnome).length!==0) {
       return (
         <div className="seller-info-div">
-          Seller Not Found
+          <p>Sold by: {seller.username}</p>
+          <a href={"mailto: " +`${gnome.seller.email}`}>Email: {gnome.seller.email}</a>
         </div>
-      )  
+      )
     } else {
       return (
-        <div id="buttons">
-          <p>Sold by: {seller.username}</p>
-          <p>Email: <a href={"mailto: " +`${seller.email}`}>{seller.email}</a></p>
+        <div className="seller-info-div">
+          <p>Loading Seller Details...</p>
         </div>
       )
     }
-      
   }
 
   if (!loaded) {
-    return <h1>Loading...</h1>;
+    return (<h1>Loading...</h1>)
   }
 
   return (
@@ -136,14 +124,6 @@ function GnomeDetails(props) {
                     </div>
                   </div>
                   {showUserOptions()}
-                  {/* <div id="buttons">
-                    <Link to={`/edit/${gnome._id}`}>
-                      <button className="btn-slide-left" id="edit">Edit</button>
-                    </Link>
-                    <button id="delete" onClick={() => deleteGnome(gnome._id)}>
-                      Delete
-                    </button>
-                  </div> */}
               </div>
             </div>
           </div>
