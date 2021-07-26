@@ -46,7 +46,7 @@ function ProductEdit(props) {
   return (
     <Layout user={props.user}>
       <div className="product-edit">
-        <div className="border">
+        <div className="border-edit">
           <div className="edit-card">
             <div className="form">
               <form className="form" onSubmit={handleSubmit}>
