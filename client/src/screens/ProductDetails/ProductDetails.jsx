@@ -7,7 +7,6 @@ import { useParams, Link, useHistory } from "react-router-dom";
 function GnomeDetails(props) {
   const [gnome, setGnome] = useState({});
   const [loaded, setLoaded] = useState(true);
-  const [seller, setSeller] = useState({});
   const { id } = useParams();
   const history = useHistory();
 
@@ -29,8 +28,9 @@ function GnomeDetails(props) {
 
   const showUserOptions = () => {
     console.log(gnome);
+    console.log(props.user)
     if(props.user && gnome && Object.keys(gnome).length!==0) {
-      if(props.user._userId===gnome.seller._id) {
+      if(props.user.id===gnome.seller._id) {
         console.log(gnome);
         return (
           <div id="buttons">
@@ -45,26 +45,23 @@ function GnomeDetails(props) {
       } else {
         return (
           <div className="seller-info-div">
-
-            <p>Sold by: {seller.username}</p>
-            <a href={`mailto: ${seller.email}`}>Email: {seller.email}</a>
+            <p>Sold by: {gnome.seller.username}</p>
+            <a href={`mailto: ${gnome.seller.email}`}>Email: {gnome.seller.email}</a>
           </div>
         )
       } 
     } else if(gnome && Object.keys(gnome).length!==0) {
       return (
         <div className="seller-info-div">
-          <p>Sold by: {seller.username}</p>
-          <a href={`${gnome.seller.email}`}>Email: {gnome.seller.email}</a>
+          <p>Sold by: {gnome.seller.username}</p>
+          <a href={`mailto: ${gnome.seller.email}`}>Email: {gnome.seller.email}</a>
         </div>
       )
     } else {
       return (
 
-
         <div className="seller-info-div">
           <p>Loading Seller Details...</p>
-
         </div>
       )
     }

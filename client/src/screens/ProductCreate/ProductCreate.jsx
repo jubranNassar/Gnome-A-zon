@@ -41,7 +41,7 @@ function ProductCreate(props) {
     setGnome({...gnome, seller: props.user.id});
     console.log(gnome);
     const created = await createGnome(gnome);
-    // setCreated({ created })
+    setCreated({ created })
   }
 
   if(isCreated) {
