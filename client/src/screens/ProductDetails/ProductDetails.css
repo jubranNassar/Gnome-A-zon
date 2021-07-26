@@ -168,7 +168,6 @@
 }
 
 .labels {
-  /* width: 10vw; */
   min-width: 120px;
   display: flex;
   flex-direction: row;
