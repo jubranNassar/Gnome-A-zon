@@ -27,11 +27,8 @@ function GnomeDetails(props) {
   }
 
   const showUserOptions = () => {
-    console.log(gnome);
-    console.log(props.user)
     if(props.user && gnome && Object.keys(gnome).length!==0) {
       if(props.user.id===gnome.seller._id) {
-        console.log(gnome);
         return (
           <div id="buttons">
             <Link to={`/edit/${gnome._id}`}>
