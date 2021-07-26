@@ -60,8 +60,11 @@ function GnomeDetails(props) {
       )
     } else {
       return (
+
+
         <div className="seller-info-div">
           <p>Loading Seller Details...</p>
+
         </div>
       )
     }
