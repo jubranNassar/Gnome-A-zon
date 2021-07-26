@@ -39,7 +39,6 @@
   justify-content: space-between;
   font-size: 2rem;
   margin-left: -7vw;
-  /* background-color: yellow; */
 }
 
 
@@ -56,7 +55,6 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  /* background-color: red; */
   height: 6vh;
   max-height: 30px;
 }
@@ -91,7 +89,6 @@ textarea {
   .form-label-input-div-su {
     font-size: 1.5rem;
     margin-left: -12vw;
-    /* background-color: yellow; */
   }
 
   .label-div-su {
@@ -164,17 +161,12 @@ textarea {
   }
 
   .form-submit-button-su {
-    /* font-size: 2.2rem; */
     min-width: 150px;
     height: 6vh;
   }
 
   .form-input-su {
     min-height: 25px;
-  }
-
-  .label-div-su {
-    /* font-size: 1.8rem; */
   }
 
 }

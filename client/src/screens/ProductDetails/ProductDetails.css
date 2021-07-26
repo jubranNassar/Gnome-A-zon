@@ -4,11 +4,10 @@
   justify-content: center;
   height: 100vh;
   background-image: url(../../images/detailScreenImage.jpeg);
-  background-position:center;
-  background-size:cover;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
 }
 
 .border {
@@ -26,6 +25,7 @@
   background: rgba(143, 194, 94, 0.7);
   width: 80vw;
   height: 75vh;
+  min-width: 250;
   max-width: 1400px;
   overflow: auto;
 
@@ -36,10 +36,10 @@
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -59,7 +59,7 @@
   line-height: 1.2;
   width: 60vw;
   height: 60vh;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 #name {
@@ -69,7 +69,6 @@
   letter-spacing: 1px;
   padding: 5px;
   line-height: 50px;
-
 }
 
 /* #price {
@@ -77,20 +76,20 @@
 } */
 
 #description {
-  
   max-height: 200px;
   overflow-y: auto;
 }
-#description::-webkit-scrollbar { width: 0 !important }
+#description::-webkit-scrollbar {
+  width: 0 !important;
+}
 
 .details-img {
   max-width: 30vw;
-  min-width: 275px;
+  min-width: 175px;
   max-height: 50vh;
   border: 2px solid #454021;
   margin: 30px 40px 0 0;
 }
-
 
 #buttons {
   display: flex;
@@ -98,7 +97,6 @@
   gap: 15px;
   justify-content: space-between;
   padding-bottom: 20px;
-
 }
 
 #edit {
@@ -115,9 +113,9 @@
   border-radius: 10px;
   cursor: pointer;
   padding: 2px;
-  
-  transition:all 0.5s ease;
-  background: linear-gradient(to left, #454021 50%, #8FC25E 50%);
+
+  transition: all 0.5s ease;
+  background: linear-gradient(to left, #454021 50%, #8fc25e 50%);
   background-size: 200% 100%;
   background-position: right bottom;
 }
@@ -141,12 +139,11 @@
   cursor: pointer;
   padding: 2px;
 
-  transition:all 0.5s ease;
-  background: linear-gradient(to right, #454021 50%, #8FC25E 50%);
+  transition: all 0.5s ease;
+  background: linear-gradient(to right, #454021 50%, #8fc25e 50%);
   background-size: 200% 100%;
   background-position: left bottom;
 }
-
 
 #delete:hover {
   background-position: right bottom;
@@ -162,19 +159,16 @@
   margin: 10px 0;
 }
 
-
 .details-label {
   display: flex;
 }
 
 .labels {
-  /* width: 10vw; */
   min-width: 120px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding: 10px;
-
 }
 
 .text {
@@ -187,14 +181,13 @@
   min-width: 120px;
 }
 
-
 .name-and-price {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 20px;
-  margin-right: -50px
+  margin-right: -50px;
 }
 
 .seller-info-div {
@@ -204,15 +197,21 @@
   padding: 10px;
 }
 
-.seller-info-div a{
+.seller-info-div a {
   text-decoration: underline;
 }
 span {
   font-weight: bold;
 }
 
-#email, #sold {
-  font-size: 22px
+#email,
+#sold {
+  font-size: 22px;
+}
+@media only screen and (max-width: 1060px) {
+  #description {
+    overflow-y: auto;
+  }
 }
 
 @media only screen and (max-width: 975px) {
@@ -232,51 +231,41 @@ span {
   #buttons {
     gap: 15px;
   }
-}
-
-@media (max-height: 575px) {
-  
-  #name {
-    font-size: 38px;
+  #email {
+    text-align: center;
+    font-size: 18px;
   }
-
-  #edit {
-    font-size: 1.7rem;
-    min-height: 20px;
+  #description {
+    min-width: 190px;
+    overflow-y: auto;
   }
-
-  #delete {
-    font-size: 1.7rem;
-    min-height: 20px;
+  .labels {
+    min-width: ;
   }
-
-  .label-input {
-    font-size: 1.5rem;
-  }
-
-  .details-card {
-    height: 75vh;
-  }
-
 }
 
 @media (max-width: 800px) {
   .details-img {
     min-width: 200px;
   }
-
+  #sold,
+  #email {
+    text-align: center;
+    font-size: 18px;
+  }
+  .labels {
+    min-width: 65px;
+  }
 }
 
 @media (max-width: 650px) {
-
   .details-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80vw;
-    min-width: 270px;
-    padding-top: 60px;
 
+    padding-top: 60px;
   }
 
   .image-and-details {
@@ -292,10 +281,9 @@ span {
     justify-content: center;
     min-width: 270px;
   }
-  
+
   .label-input {
     min-width: 270px;
-
   }
 
   .img-div {
@@ -315,25 +303,77 @@ span {
     max-width: 270px;
   }
 
-
   #buttons {
     width: 75vw;
     display: flex;
     justify-content: space-around;
   }
+
+  #sold,
+  #email {
+    text-align: left;
+    font-size: 16px;
+  }
+  
+}
+
+@media (max-width: 575px) {
+  #name {
+    font-size: 38px;
+  }
+
+  #edit {
+    font-size: 1.7rem;
+    min-height: 20px;
+  }
+
+  #delete {
+    font-size: 1.7rem;
+    min-height: 20px;
+  }
+
+  .label-input {
+    font-size: 1.5rem;
+  }
+
+  .details-img {
+    margin: 0;
+  }
+  .details-card {
+    margin: 20px auto;
+    height: 75vh;
+  }
+  .label-input {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 300px) {
   .details-card {
-    min-width: 240px;
+    margin: 10px auto;
   }
-
+  .details-img {
+    margin: 0;
+  }
   .details {
     min-width: 240px;
   }
 
+  .labels {
+    min-width: 55px;
+  }
   .label-input {
     min-width: 240px;
   }
+  #name {
+    font-size: 35px;
+  }
+  #sold,
+  #email {
+    text-align: center;
+    font-size: 12px;
+  }
+  .label-input {
+    flex-direction: column;
+  }
 }
-

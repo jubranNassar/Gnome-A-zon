@@ -26,12 +26,9 @@
 }
 
 .edit-label-input {
-  width: 35vw;
-  min-width: 260px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  font-size: 2rem;
+  width: 100vw;
+  min-width: 160px;
+  
 }
 
 .edit-image {
@@ -55,6 +52,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  
 }
 
 .name-edit {
@@ -161,4 +159,137 @@
 
 .save-button:hover {
   background-position: right bottom;
+}
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+@media (max-width: 300px) {
+  .image-and-form {
+    flex-direction: column;
+    width: 100vw;
+  }
+  .product-edit {
+    height: 150vh;
+
+  }
+  .edit-card {
+    margin: 0;
+  }
+
+  .edit-label-input {
+    width: 35vw;
+    min-width: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 2rem;
+  }
+
+  .edit-image {
+    width: 20vw;
+    min-width: 200px;
+    height: 35vh;
+    max-height: 350px;
+    border: 2px solid #454021;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .edit-form-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    flex-direction: column;
+  }
+
+  .name-edit {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+
+  #edit-name {
+    font-size: 5rem;
+    width: 32vw;
+    padding: 6px;
+    font-family: Delius Swash Caps;
+    text-align: center;
+  }
+
+  #edit-price {
+    width: 25vw;
+    padding: 4px;
+  }
+
+  #edit-details {
+    width: 25vw;
+    padding: 4px;
+  }
+
+  #edit-image-url {
+    width: 25vw;
+    padding: 4px;
+  }
+
+  #edit-material {
+    width: 25vw;
+    padding: 4px;
+  }
+
+  #edit-collection {
+    width: 25vw;
+    padding: 4px;
+  }
+
+  .edit-label {
+    width: 10vw;
+    min-width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .edit-text {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    padding: 10px;
+    letter-spacing: 0.9px;
+    width: 20vw;
+    min-width: 120px;
+  }
+
+  .button-container {
+    /* margin: 0 auto; */
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+    height: 8vh;
+  }
+  .save-button {
+    margin-top: 20px;
+    margin: 0px auto;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    min-width: 100px;
+    height: 6vh;
+    width: 7vw;
+    align-self: flex-end;
+    background-color: #454021;
+    color: white;
+    border-radius: 10px;
+    
+    padding: 2px;
+
+
+  }
+
+ 
 }
