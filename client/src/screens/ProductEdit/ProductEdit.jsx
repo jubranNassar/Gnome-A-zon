@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import Layout from "../../components/Layout/Layout.jsx";
+import MaterialSelect from '../../components/MaterialSelect/MaterialSelect.jsx'
+import CollectionSelect from '../../components/CollectionSelect/CollectionSelect.jsx'
 import { getGnome, updateGnome } from "../../services/gnomes";
 import { useParams, Redirect } from "react-router-dom";
 import "./ProductEdit.css";
@@ -15,6 +17,10 @@ function ProductEdit(props) {
   });
 
   const [updated, setUpdated] = useState(false);
+
+  const [selectedMaterials, setSelectedMaterials] = useState([]);
+  const [selectedCollections, setSelectedCollections] = useState([]);
+
   let { id } = useParams();
 
   useEffect(() => {
@@ -24,6 +30,10 @@ function ProductEdit(props) {
     };
     fetchGnome();
   }, [id]);
+
+  useEffect(()=>{
+    setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections]})
+  },[selectedCollections, selectedMaterials])
 
   const handleChange = async (e) => {
     const { name, value } = e.target;
@@ -35,6 +45,7 @@ function ProductEdit(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections], seller: props.user.id});
     const updated = await updateGnome(id, gnome);
     setUpdated(updated);
   };
@@ -115,13 +126,14 @@ function ProductEdit(props) {
                         <label htmlFor="edit-material">Material:</label>
                       </div>
                       <div className="edit-text">
-                        <input
+                        {/* <input
                           id="edit-material"
                           value={gnome.materials}
                           name="materials"
                           required
                           onChange={handleChange}
-                        />
+                        /> */}
+                        <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}/>
                       </div>
                     </div>
                     <div className="edit-label-input" id="collection-input">
@@ -131,12 +143,14 @@ function ProductEdit(props) {
                         </label>
                       </div>
                       <div className="edit-text">
-                        <input
+                        {/* <input
                           id="edit-collection"
                           value={gnome.category}
                           name="category"
                           required
                           onChange={handleChange}
+                        /> */}
+                        <CollectionSelect selectedCollections ={selectedCollections} setSelectedCollections={setSelectedCollections}
                         />
                       </div>
                     </div>
