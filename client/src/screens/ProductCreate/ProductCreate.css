@@ -1,0 +1,206 @@
+.forms-screen-pc{
+  background: center / cover no-repeat url("../../images/formScreensImage.jpeg");
+  height: 100vh;
+  min-height: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+
+.create-form-pc {
+  height: 80vh;
+  min-height: 550px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.forms-card-pc {
+  background-color: #8ec25ef1;
+  width: 70vw;
+  min-width: 260px;
+  height: 85vh;
+  min-height: 600px;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 2vh 0;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+.form-label-input-div-pc {
+  width: 50vw;
+  min-width: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-left: -7vw;
+}
+
+
+.form-input-pc {
+  width: 25vw;
+  min-width: 120px;
+}
+
+.label-div-pc {
+  width: 20vw;
+  min-width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.form-title-pc {
+  margin: 2vh;
+  font-size: 3rem;
+  font-family: 'Delius Swash Caps', cursive; 
+}
+
+.form-submit-button-pc {
+  color: white;
+  background-color: #454021;
+  border: none;
+  border: 3px solid #454021;
+  padding: 1vh;
+  width: 12vw;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.3rem;
+  border-radius: 10px;
+  height: 7vh;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.btn-slide-up {
+  background: linear-gradient(to bottom, #454021 50%, #9fda69f1 50%);
+  background-size: 100% 200%;
+  background-position: left top;
+}
+.btn-slide-up:hover {
+  background-position: right bottom;
+}
+
+textarea {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .form-label-input-div-pc {
+    font-size: 1.8rem;
+    margin-left: 1.5vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .label-div-pc {
+    width: 12vw;
+    min-width: 175px;
+    vertical-align: center;
+    justify-content: flex-start;
+  }
+  .form-input-pc {
+    width: 20vw;
+    min-width: 175px;
+    margin-left: 10px;
+  }
+
+  .form-submit-button-pc {
+    font-size: 1.5rem;
+    min-width: 150px;
+  }
+
+  .forms-card-pc {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .forms-card-pc {
+    width: 70vw;
+  }
+
+  .form-input-pc {
+    min-height: 20px;
+  }
+
+  
+}
+
+@media only screen and (min-width: 550px) and (max-width: 800px) {
+
+  .forms-card-pc {
+    height: 70vh;
+    width: 80vw;
+  }
+
+  .form-submit-button-pc {
+    font-size: 2.2rem;
+    min-width: 150px;
+    height: 6vh;
+  }
+
+  .form-input-pc {
+    min-height: 25px;
+    width: 30vw;
+  }
+
+  .label-div-pc {
+    font-size: 1.8rem;
+    justify-content: flex-end;
+  }
+
+  .form-label-input-div-pc {
+    width: 70vw;
+    min-width: 500px;
+    margin-left: -10vw;
+    /* background-color: red; */
+  }
+
+}
+
+@media only screen and (min-height: 1250px) {
+  .label-div-pc {
+    font-size: 2.3rem;
+  
+  }
+
+  .form-submit-button-pc {
+    font-size: 2.3rem;
+    min-width: 150px;
+    height: 5vh;
+  }
+
+  .form-label-input-div-pc {
+    width: 55vw;
+    min-width: 500px;
+    margin-left: -10vw;
+    
+}
+}

@@ -1,0 +1,109 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
+.products-container {
+  overflow: auto;
+  display: flex;
+  grid-gap: 10rem 10rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+  max-width: 1400px;
+}
+
+.product-heading {
+  background-color: #8fc25e;
+  border: 1px solid #454021;
+  font-family: "Dancing Script", cursive;
+  font-size: 5.2rem;
+  margin: 3rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  width: 68vw;
+  max-width: 1400px;
+
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.product-page {
+  align-items: center;
+  background-image: url(../../images/yellowforest.jpeg);
+  background-color: rgba(196, 196, 196, 0.45);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.products-container::-webkit-scrollbar { width: 0 !important }
+
+.test {
+  background-blend-mode: overlay;
+}
+@media (max-width: 1030px) {
+  .product-page {
+    height: 130vw;
+  }
+}
+
+@media (max-width: 850) {
+  .products-container {
+    grid-gap: 8rem 8rem;
+    max-width: 1400px;
+  }
+}
+@media (max-width: 683px) {
+  .product-page {
+    height: 250vw;
+  }
+  .products-container {
+    grid-gap: 7rem 7rem;
+  }
+}
+
+@media (max-width: 645px) {
+  .product-heading {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .product-heading {
+    font-size: 3.5rem;
+    min-width: 250px;
+  }
+}
+@media (max-width: 445px) {
+  .product-heading {
+    font-size: 3rem;
+  }
+
+  .products-container {
+    grid-gap: 5rem 8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .product-heading {
+    font-size: 2.5rem;
+  }
+  .products-container {
+    padding:0;
+  }
+}

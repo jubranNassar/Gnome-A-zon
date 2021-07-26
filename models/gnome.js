@@ -8,8 +8,8 @@ const Gnome = new Schema(
     details: { type: String, required: true },
     image_url: { type: String, required: true },
     category: { type: Array, required: true },
-    materials: { type: String, required: true },
-    seller: { type: String, required: true },
+    materials: { type: Array, required: true },
+    seller: { type: Schema.Types.ObjectId, ref: 'users' },
   },
   { timestamps: true }
 );

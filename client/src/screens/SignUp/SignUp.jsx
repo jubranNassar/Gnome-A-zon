@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './SignUp.css'
 import { signUp } from '../../services/users'
 import { useHistory } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout.jsx';
 
 const SignUp = (props) => {
   const history = useHistory()
@@ -42,7 +43,7 @@ const SignUp = (props) => {
   }
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
+    const toggleForm = form.isError ? 'danger form-submit-button-su' : 'form-submit-button-su'
     if (form.isError) {
       return (
         <button type='submit' className={toggleForm}>
@@ -50,55 +51,83 @@ const SignUp = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign Up</button>
+      return <button type='submit' className='form-submit-button-su'>Sign Up</button>
     }
   }
 
   const { username, email, password, passwordConfirmation } = form
 
   return (
-    <div className='form-container'>
-      <h3>Sign Up</h3>
-      <form onSubmit={onSignUp}>
-        <label>Username</label>
-        <input
-          required
-          type='text'
-          name='username'
-          value={username}
-          placeholder='Enter username'
-          onChange={handleChange}
-        />
-        <label>Email address</label>
-        <input
-          required
-          type='email'
-          name='email'
-          value={email}
-          placeholder='Enter email'
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name='password'
-          value={password}
-          type='password'
-          placeholder='Password'
-          onChange={handleChange}
-        />
-        <label>Password Confirmation</label>
-        <input
-          required
-          name='passwordConfirmation'
-          value={passwordConfirmation}
-          type='password'
-          placeholder='Confirm Password'
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
-    </div>
+    <Layout user={props.user}>
+      <div className='forms-screen-su'>
+        <div className='auth-forms-card-su'>
+          <h3 className='form-title-su'>Sign Up</h3>
+          <form onSubmit={onSignUp} className='auth-form-su'>
+
+            <div className='form-label-input-div-su'>
+              <div className="label-div-su">
+                <label>Username:</label>
+              </div>
+              <input
+              required
+              type='text'
+              name='username'
+              className= 'form-input-su'
+              value={username}
+              placeholder='Enter username'
+              onChange={handleChange}
+              />
+            </div>
+
+            <div className='form-label-input-div-su'>
+              <div className="label-div-su">
+                <label>Email address:</label>
+              </div>
+              <input
+                required
+                type='email'
+                name='email'
+                className= 'form-input-su'
+                value={email}
+                placeholder='Enter email'
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className='form-label-input-div-su'>
+              <div className="label-div-su">
+                <label>Password:</label>
+              </div>
+              <input
+                required
+                name='password'
+                value={password}
+                type='password'
+                className= 'form-input-su'
+                placeholder='Password'
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className='form-label-input-div-su'>
+              <div className="label-div-su">
+                <label>Confirm Password:</label>
+              </div>
+              <input
+                required
+                name='passwordConfirmation'
+                className= 'form-input-su'
+                value={passwordConfirmation}
+                type='password'
+                placeholder='Confirm Password'
+                onChange={handleChange}
+              />
+            </div>
+            {renderError()}
+          </form>
+        </div>
+      </div>
+    </Layout>
   )
 }
 

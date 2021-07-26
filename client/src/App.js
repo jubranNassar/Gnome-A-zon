@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import { verifyUser } from "./services/users";
 import { Route } from 'react-router-dom';
 import Home from './screens/Home/Home.jsx';
 import Products from './screens/Products/Products.jsx';
@@ -11,38 +13,49 @@ import SignUp from './screens/SignUp/SignUp.jsx';
 import './App.css';
 
 function App() {
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
+
   return (
     <div className="App">
       <Route exact path = '/'>
-        < Home />
+        < Home user={user} />
       </Route>
 
       <Route exact path = '/gnomes'>
-        < Products />
+        <Products user={user} />
       </Route>
 
       <Route path = '/gnomes/:id'>
-        < ProductDetails />
+        < ProductDetails user={user}/>
       </Route>
 
       <Route path = "/edit/:id">
-        < ProductEdit />
+        < ProductEdit user={user}/>
       </Route>
 
       <Route exact path = "/create">
-        < ProductCreate />
+        < ProductCreate user={user}/>
       </Route>
 
       <Route exact path = "/sign-up">
-        < SignUp />
+        < SignUp setUser={setUser} user={user}/>
       </Route>
 
       <Route exact path = "/sign-in">
-        < SignIn />
+        < SignIn setUser={setUser} user={user}/>
       </Route>
 
       <Route exact path = "/sign-out">
-        < SignOut />
+        < SignOut setUser={setUser}/>
       </Route>
     </div>
   );
