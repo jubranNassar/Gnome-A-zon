@@ -22,7 +22,7 @@ nav {
 
 .nav-outer-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .links {
@@ -170,7 +170,7 @@ nav {
 
 @media (max-width: 707px) {
   .fa-bars {
-    font-size: 3rem;
+    font-size: 5rem;
     display: inline;
     padding: 1rem;
     margin: 0 2rem 3rem 0;
@@ -183,7 +183,7 @@ nav {
     flex-direction: column;
     height: 40vh;
     text-align: end;
-    width: 35vw;
+    width: 60vw;
     z-index: 5;
 
 
@@ -193,7 +193,7 @@ nav {
     align-items: center;
     display: grid;
     flex-direction: column;
-    width: 35vw;
+    width: 57vw;
     z-index: 10;
 
   animation: fadeInAnimation ease 1s;
@@ -219,7 +219,7 @@ nav {
     font-size: 2rem;
     padding: 1.5rem;
     height: 40vh;
-    width: 35vw;
+    width: 40vw;
   }
   
   .link {
@@ -227,4 +227,8 @@ nav {
     justify-content: center;
     margin: 0;
   }
+}
+
+@media (max-width: 300px) {
+
 }

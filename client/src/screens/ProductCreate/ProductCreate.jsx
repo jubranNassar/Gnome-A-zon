@@ -25,7 +25,7 @@ function ProductCreate(props) {
 
   useEffect(()=>{
     setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections]})
-  },[selectedCollections, selectedMaterials])
+  },[selectedCollections, selectedMaterials,])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
