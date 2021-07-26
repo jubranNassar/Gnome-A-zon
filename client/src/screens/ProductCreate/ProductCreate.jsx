@@ -36,10 +36,7 @@ function ProductCreate(props) {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(gnome);
-    console.log(props.user);
     setGnome({...gnome, seller: props.user.id});
-    console.log(gnome);
     const created = await createGnome(gnome);
     setCreated({ created })
   }
