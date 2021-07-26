@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import "./ProductDetails.css";
 import { getGnome, deleteGnome } from "../../services/gnomes";
 import Layout from "../../components/Layout/Layout.jsx";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 
 function GnomeDetails(props) {
   const [gnome, setGnome] = useState({});
   const [loaded, setLoaded] = useState(true);
   const [seller, setSeller] = useState({});
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchGnome = async () => {
@@ -21,6 +22,11 @@ function GnomeDetails(props) {
   }, [id]);
 
 
+  const handleDelete = async () => {
+    await deleteGnome(gnome._id);
+    history.push("/gnomes")
+  }
+
   const showUserOptions = () => {
     console.log(gnome);
     if(props.user && gnome && Object.keys(gnome).length!==0) {
@@ -31,7 +37,7 @@ function GnomeDetails(props) {
             <Link to={`/edit/${gnome._id}`}>
               <button className="btn-slide-left" id="edit">Edit</button>
             </Link>
-            <button id="delete" onClick={() => deleteGnome(gnome._id)}>
+            <button id="delete" onClick={handleDelete}>
               Delete
             </button>
           </div>
