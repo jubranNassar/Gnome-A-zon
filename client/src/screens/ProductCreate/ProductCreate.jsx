@@ -50,13 +50,14 @@ function ProductCreate(props) {
 
   if(!props.user || Object.keys(props.user).length === 0) {
     return (
-      <h3>Please sign in to add a gnome to the market.</h3>
+      <Layout>
+        <h3>Please sign in to add a gnome to the market.</h3>
+      </Layout>
     )
   } else {
 
   return (
-
-    <Layout>
+    <Layout user={props.user}>
       <div className='forms-screen-pc'>
         <div className='forms-card-pc'>
           <h3 className='form-title-pc'>Sell a Gnome</h3>
