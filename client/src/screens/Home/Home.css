@@ -52,7 +52,8 @@
 
 .home_button {
   border: 2px solid #454021;
-  margin-left: 18rem;
+  /* margin-left: 18rem; */
+  margin-left: 12vw;
   margin-top: 1rem;
   width: 17vw;
   min-width: 125px;
@@ -74,31 +75,6 @@
   background-position: right top;
 }
 
-/* @media (max-width: 1163px){
-.welcome_home_card{
-  width: 55vw;
-  height: 40vh;
-  text-align: center;
-  padding-top: 4rem;
-  margin-top: 4rem;
-  margin-left: 4rem;
-
-}
-
-.subtext_home_text {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  font-size: 30px;
-  font-family: Delius Swash Caps;
-}
-
-.home_button{
-  width: 50vw;
-  font-size: 30px;
-}
-
-} */
-
 @media (max-width: 1258px) {
   .home_button {
     font-size: 2.5rem;
@@ -108,10 +84,6 @@
     padding-top: 5rem;
     font-size: 2.5rem;
   }
-  /* .home {
-    background-size: contain;
-    height: 100%;
-  } */
 }
 
 @media (max-width: 1130px) {
@@ -119,9 +91,7 @@
     font-size: 2.5rem;
     margin-left: 16.5rem;
   }
-  
 }
-
 
 @media (max-width: 980px) {
   .home_button {
@@ -173,7 +143,6 @@
     font-size: 1.8rem;
   }
   .welcome_home_card {
-    
     margin-top: 0.2rem;
     margin-left: 0.8rem;
   }

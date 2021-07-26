@@ -13,7 +13,7 @@ function ProductCreate(props) {
     image_url: '',
     category: [],
     materials: '',
-    seller: props.user ? props.user.username : null
+    seller: props.user ? props.user.id : null
   });
 
   const [isCreated, setCreated] = useState(false);
@@ -36,13 +36,23 @@ function ProductCreate(props) {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
+    console.log(gnome);
+    console.log(props.user);
+    setGnome({...gnome, seller: props.user.id});
+    console.log(gnome);
     const created = await createGnome(gnome);
-    setCreated({ created })
+    // setCreated({ created })
   }
 
   if(isCreated) {
     return <Redirect to={'/gnomes'} />
   }
+
+  if(!props.user || Object.keys(props.user).length === 0) {
+    return (
+      <h3>Please sign in to add a gnome to the market.</h3>
+    )
+  } else {
 
   return (
 
@@ -149,6 +159,7 @@ function ProductCreate(props) {
       </div>
     </Layout>
   )
+}
 }
 
 export default ProductCreate;
