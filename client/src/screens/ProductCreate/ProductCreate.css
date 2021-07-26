@@ -22,6 +22,7 @@
   width: 70vw;
   min-width: 260px;
   height: 85vh;
+  min-height: 600px;
   margin: 5vh auto;
   display: flex;
   flex-direction: column;
