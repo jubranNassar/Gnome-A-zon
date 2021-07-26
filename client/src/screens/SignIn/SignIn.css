@@ -96,10 +96,11 @@
   border: none;
   color: #fff;
   background: #454021;
-  box-shadow: inset 0 0 0 0 #ff6633;
+  border: 2px solid #454021;
+  box-shadow: inset 0 0 0 0 #454021;
 }
 .btn-reg:hover {
-  box-shadow: inset 0 0 0 50px #dd4411;
+  box-shadow: inset 0 0 0 50px #8ec25ef1;
 }
 
 textarea {
