@@ -125,23 +125,27 @@ function ProductEdit(props) {
                       </div>
                     </div>
                     <div className="edit-label-input" id="collection-input">
-                      <label id="collection-label" htmlFor="edit-collection">Collection:</label>
+                      <div className="edit-label">
+                        <label id="collection-label" htmlFor="edit-collection">
+                          Collection:
+                        </label>
+                      </div>
                       <div className="edit-text">
-                        <div className="collection-and-button">
-                          <input
-                            id="edit-collection"
-                            value={gnome.category}
-                            name="category"
-                            required
-                            onChange={handleChange}
-                          />
-                          <button type="submit" className="save-button">
-                            Save Changes
-                          </button>
-                        </div>
+                        <input
+                          id="edit-collection"
+                          value={gnome.category}
+                          name="category"
+                          required
+                          onChange={handleChange}
+                        />
                       </div>
                     </div>
                   </div>
+                </div>
+                <div className="button-container">
+                  <button type="submit" className="save-button">
+                    Save Changes
+                  </button>
                 </div>
               </form>
             </div>
