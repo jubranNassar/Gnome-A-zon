@@ -14,7 +14,7 @@ function Header(props) {
         </div>
       </div>
       <div className="title">
-        < img id="dabber_logo" src= {Dabber}/> 
+        < img id="dabber_logo" src= {Dabber} alt="gnome-logo"/> 
         
       </div>
       <Nav user={props.user}/>
