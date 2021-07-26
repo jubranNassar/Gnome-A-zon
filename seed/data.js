@@ -41,7 +41,7 @@ const insertData = async () => {
       materials: 'hard clay',
       category:[ 'edumacation'],
       price: '12.95',
-      seller: 'GnomeDaddy'
+      seller: user3
     }, 
     {
       name: 'Harley Gnome', 
@@ -50,7 +50,7 @@ const insertData = async () => {
       materials: 'steel',
       category: ['rock-star'],
       price: '15.99',
-      seller: 'GnomeMommy'
+      seller: user3
     }, 
     {
       name: 'Zombie Gnome', 
@@ -59,7 +59,7 @@ const insertData = async () => {
       materials: 'cement',
       category: ['halloween'],
       price: '29.99',
-      seller: 'GnomeBaby'
+      seller: user3
     },
     {
       name: 'Santa Gnome',
@@ -68,7 +68,7 @@ const insertData = async () => {
       image_url: 'https://4kwallpaper.wiki/wp-content/uploads/2019/09/370183.jpg',
       category:['Christmas'],
       materials:'plastic',
-      seller:'Joe Brown'
+      seller: user1
     },
     {
       name: 'Patriot Gnome',
@@ -77,7 +77,7 @@ const insertData = async () => {
       image_url: 'https://i5.walmartimages.com/asr/9b7a94f5-dfb9-45b0-8422-8a59a3a39d36_2.bfd40e2f8e019bdfe56dae1fb3bf1e02.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF',
       category: ['4th of July'],
       materials:'ceramic',
-      seller: 'Uncle Sam'
+      seller: user2
     },
     {
       name: 'Every Man Gnome',
@@ -86,7 +86,7 @@ const insertData = async () => {
       image_url: 'https://cdn.shopify.com/s/files/1/0550/7222/7493/products/On-Toilet-Funny-Garden-Gnome_12_600x600.jpg?v=1621895230',
       category:['Funny Gnome'],
       materials:'iron',
-      seller: 'Billy Bob'
+      seller: user2
     },
     
 
