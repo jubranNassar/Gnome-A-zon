@@ -13,7 +13,7 @@ export const getGnomes = async (req, res) => {
 export const getGnome = async (req, res) => {
   try {
     const { id } = req.params
-    const gnome = await Gnome.findById(id)
+    const gnome = await Gnome.findById(id).populate('seller')
     if (gnome) {
       return res.json(gnome)
     }
