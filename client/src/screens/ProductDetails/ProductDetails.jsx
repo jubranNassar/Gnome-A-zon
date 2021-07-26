@@ -45,8 +45,8 @@ function GnomeDetails(props) {
       } else {
         return (
           <div className="seller-info-div">
-            <p>Sold by: {gnome.seller.username}</p>
-            <a href={`mailto: ${gnome.seller.email}`}>Email: {gnome.seller.email}</a>
+            <p id="sold"><span>Sold by:</span> {gnome.seller.username}</p>
+            <a id="email"href={`mailto: ${gnome.seller.email}`}><span>Email:</span> {gnome.seller.email}</a>
           </div>
         )
       } 
