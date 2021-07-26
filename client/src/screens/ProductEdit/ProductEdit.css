@@ -7,6 +7,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100vh;
+  min-height: 700px;
 }
 
 .border-edit {
@@ -20,8 +22,8 @@
   align-items: center;
   background-color: #8fc25e;
   background: rgba(143, 194, 94, 0.7);
-  width: 68vw;
-  height: 70vh;
+  width: 75vw;
+  height: fit-content;
   min-height: 350px;
 
   animation: fadeInAnimation ease 2s;
@@ -66,11 +68,11 @@
 .name-edit {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 60px;
+  margin: 30px 0;
 }
 
 #edit-name {
-  font-size: 5rem;
+  font-size: 4rem;
   width: 32vw;
   padding: 6px;
   font-family: Delius Swash Caps;
