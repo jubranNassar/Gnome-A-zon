@@ -1,5 +1,5 @@
 import "./Nav.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -66,6 +66,7 @@ function Nav({ user }) {
           icon={faBars}
           onClick={() => setHamburger(!hamburger)}
         />
+        
       <nav className="nav-container"
         style={{ display: visible || hamburger ? "flex" : "none" }}>
         <div className="nav-container">
