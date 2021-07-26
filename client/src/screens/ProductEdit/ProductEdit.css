@@ -9,6 +9,10 @@
   background-attachment: fixed;
 }
 
+.border-edit {
+  height: 100vh;
+}
+
 .edit-card {
   display: flex;
   margin: 80px auto;
@@ -26,8 +30,12 @@
 }
 
 .edit-label-input {
-  width: 100vw;
-  min-width: 160px;
+  width: 35vw;
+  min-width: 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 2rem;
   
 }
 
