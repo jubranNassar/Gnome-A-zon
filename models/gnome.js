@@ -9,7 +9,7 @@ const Gnome = new Schema(
     image_url: { type: String, required: true },
     category: { type: Array, required: true },
     materials: { type: String, required: true },
-    seller: { type: String, required: true },
+    seller: { type: Schema.Types.ObjectId, ref: 'users' },
   },
   { timestamps: true }
 );
