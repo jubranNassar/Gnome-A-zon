@@ -54,7 +54,7 @@ function GnomeDetails(props) {
         return (
           <div className="seller-info-div">
             <p>Sold by: {seller.username}</p>
-            <a href={"mailto: " +`${seller.email}`}>Email: {seller.email}</a>
+            <a href={`mailto: ${seller.email}`}>Email: {seller.email}</a>
           </div>
         )
       }
@@ -68,7 +68,7 @@ function GnomeDetails(props) {
       return (
         <div id="buttons">
           <p>Sold by: {seller.username}</p>
-          <p>Email: <a href={"mailto: " +`${seller.email}`}>{seller.email}</a></p>
+          <p>Email: <a href={`mailto: ${seller.email}`}>{seller.email}</a></p>
         </div>
       )
     }
