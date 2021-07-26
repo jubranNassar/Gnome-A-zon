@@ -158,7 +158,7 @@ function ProductEdit(props) {
                 </div>
                 <div className="button-container">
                   <button type="submit" className="save-button">
-                    Save Changes
+                    Save
                   </button>
                 </div>
               </form>
