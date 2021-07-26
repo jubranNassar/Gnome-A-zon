@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Redirect } from 'react-router-dom'
 import { createGnome } from '../../services/gnomes.js'
 import Layout from '../../components/Layout/Layout.jsx'
+import MaterialSelect from '../../components/MaterialSelect/MaterialSelect.jsx'
+import CollectionSelect from '../../components/CollectionSelect/CollectionSelect.jsx'
 import './ProductCreate.css'
 
 function ProductCreate(props) {
@@ -12,11 +14,18 @@ function ProductCreate(props) {
     details: '',
     image_url: '',
     category: [],
-    materials: '',
+    materials: [],
     seller: props.user ? props.user.id : null
   });
 
   const [isCreated, setCreated] = useState(false);
+
+  const [selectedMaterials, setSelectedMaterials] = useState([]);
+  const [selectedCollections, setSelectedCollections] = useState([]);
+
+  useEffect(()=>{
+    setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections]})
+  },[selectedCollections, selectedMaterials])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,17 +35,17 @@ function ProductCreate(props) {
     })
   }
 
-  const handleSelect = (e) => {
-    const { name, value } = e.target
-    setGnome({
-      ...gnome,
-      [name]: [value]
-    })
-  }
+  // const handleSelect = (e) => {
+  //   const { name, value } = e.target
+  //   setGnome({
+  //     ...gnome,
+  //     [name]: [value]
+  //   })
+  // }
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    setGnome({...gnome, seller: props.user.id});
+    setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections], seller: props.user.id});
     const created = await createGnome(gnome);
     setCreated({ created })
   }
@@ -126,7 +135,7 @@ function ProductCreate(props) {
               <div className="label-div-pc">   
                 <label htmlFor="materials-input">Materials: </label>
               </div>
-              <input
+              {/* <input
                 type="text" 
                 id="materials-input"
                 className="materials-input-pc form-input-pc"
@@ -134,14 +143,15 @@ function ProductCreate(props) {
                 value={gnome.materials}
                 onChange={handleChange}
                 required
-              />
+              /> */}
+              <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}/>
             </div> 
 
             <div className='form-label-input-div-pc'>
               <div className="label-div-pc">
                 <label htmlFor="category-input">Category: </label>
               </div>
-              <input
+              {/* <input
                 type="text" 
                 id="category-input"
                 className="category-input-pc form-input-pc"
@@ -149,6 +159,8 @@ function ProductCreate(props) {
                 value={gnome.category}
                 onChange={handleSelect}
                 required
+              /> */}
+              <CollectionSelect selectedCollections ={selectedCollections} setSelectedCollections={setSelectedCollections}
               />
             </div>
             <button type="submit" className="form-submit-button-pc btn btn-slide-up">Submit</button>
