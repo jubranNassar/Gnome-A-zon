@@ -128,14 +128,14 @@ function ProductCreate(props) {
               <div className="label-div-pc">   
                 <label htmlFor="materials-input">Materials: </label>
               </div>
-              <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}/>
+              <MaterialSelect setSelectedMaterials={setSelectedMaterials}/>
             </div> 
 
             <div className='form-label-input-div-pc'>
               <div className="label-div-pc">
                 <label htmlFor="category-input">Category: </label>
               </div>
-              <CollectionSelect selectedCollections ={selectedCollections} setSelectedCollections={setSelectedCollections}
+              <CollectionSelect setSelectedCollections={setSelectedCollections}
               />
             </div>
             <button type="submit" className="form-submit-button-pc btn btn-slide-up">Submit</button>

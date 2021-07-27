@@ -1,9 +1,9 @@
 import Multiselect from 'multiselect-react-dropdown';
 
-function CollectionSelect({selectedCollections, setSelectedCollections}) {
+function CollectionSelect({setSelectedCollections}) {
   
     const handleSelect = (option) => {
-      setSelectedCollections(...selectedCollections, option);
+      setSelectedCollections([...option]);
     }
   
     return (
@@ -15,7 +15,9 @@ function CollectionSelect({selectedCollections, setSelectedCollections}) {
           className="category-input-pc form-input-pc"
           options = {['holiday', 'humorous', 'hobbies', 'traditional', 'cheeky', 'pop culture', 'other']}
           onSelect = {handleSelect}
+          onRemove = {handleSelect}
           showCheckbox
+          style={{chips: {background: '#8fc25e'}}}
         />
       </div>
 

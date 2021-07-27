@@ -6,7 +6,7 @@ const getToken = () => {
   })
 }
 
-const herokuURL = "saltygnome.herokuapp.com/api";
+const herokuURL = "saltygnomes.herokuapp.com/api";
 
 const api = axios.create({
   baseURL: process.env.NODE_ENV === 'production'
