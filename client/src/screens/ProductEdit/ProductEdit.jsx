@@ -29,6 +29,7 @@ function ProductEdit(props) {
       setGnome(gnome);
     };
     fetchGnome();
+    props.setScreen('edit')
   }, [id]);
 
   useEffect(()=>{
@@ -55,7 +56,7 @@ function ProductEdit(props) {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
       <div className="product-edit">
         <div className="border-edit">
           <div className="edit-card">

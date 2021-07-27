@@ -10,6 +10,10 @@ import './ProductCreate.css'
 
 function ProductCreate(props) {
 
+  useEffect(() => {
+    props.setScreen("create")
+  },[])
+
   const [gnome, setGnome] = useState( {
     name: '',
     price: '',
@@ -65,7 +69,7 @@ function ProductCreate(props) {
   } else {
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
       <div className='forms-screen-pc'>
         <div className='forms-card-pc'>
           <h3 className='form-title-pc'>Sell a Gnome</h3>

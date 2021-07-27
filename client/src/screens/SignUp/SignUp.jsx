@@ -2,10 +2,15 @@ import { useState } from 'react'
 import './SignUp.css'
 import { signUp } from '../../services/users'
 import { useHistory } from 'react-router-dom'
+import { useEffect } from 'react'
 import Layout from '../../components/Layout/Layout.jsx';
 
 const SignUp = (props) => {
   const history = useHistory()
+
+  useEffect(() => {
+    props.setScreen('sign-up')
+  },[])
 
   const [form, setForm] = useState({
     username: '',
@@ -58,7 +63,7 @@ const SignUp = (props) => {
   const { username, email, password, passwordConfirmation } = form
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
       <div className='forms-screen-su'>
         <div className='auth-forms-card-su'>
           <h3 className='form-title-su'>Sign Up</h3>

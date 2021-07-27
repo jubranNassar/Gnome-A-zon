@@ -18,6 +18,7 @@ function GnomeDetails(props) {
     }
 
     fetchGnome();
+    props.setScreen('detail')
   }, [id]);
 
 
@@ -69,7 +70,7 @@ function GnomeDetails(props) {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
       <div className="product-info">
         <div className="border">
           <div className="details-card">
