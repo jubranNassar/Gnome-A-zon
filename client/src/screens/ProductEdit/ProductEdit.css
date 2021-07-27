@@ -126,6 +126,31 @@
   min-width: 180px;
 }
 
+#category-input {
+  width: 20vw;
+  min-width: 160px;
+  font-size: 1.6rem;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+
+}
+
+Multiselect chips {
+  background-color: green;
+}
+
+#materials-input {
+  width: 20vw;
+  min-width: 160px;
+  font-size: 1.6rem;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+
+
+}
+
 .button-container {
   display: flex;
   align-items: center;
@@ -160,6 +185,7 @@
 .save-button:hover {
   background-position: right bottom;
 }
+
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
@@ -229,6 +255,17 @@
     width: 30vw;
     min-width: 220px;
   }
+
+  #category-input {
+    width: 30vw;
+    min-width: 200px;
+  
+  }
+  
+  #materials-input {
+    width: 30vw;
+    min-width: 200px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -240,6 +277,17 @@
     width: 50vw;
     min-width: 300px;
     font-size: 2.5rem;
+  }
+
+  #category-input {
+    width: 40vw;
+    min-width: 160px;
+  
+  }
+  
+  #materials-input {
+    width: 40vw;
+    min-width: 160px;
   }
 }
 

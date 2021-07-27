@@ -1,5 +1,6 @@
 import Multiselect from 'multiselect-react-dropdown';
 import { useState } from 'react';
+import './CollectionSelect.css';
 
 function CollectionSelect({selectedCollections, setSelectedCollections}) {
   
@@ -14,10 +15,11 @@ function CollectionSelect({selectedCollections, setSelectedCollections}) {
           isObject={false}
           name = "category"
           id = "category-input"
-          className="category-input-pc form-input-pc"
+          className="category-input-pc form-input-pc multiselect"
           options = {['holiday', 'humorous', 'hobbies', 'traditional', 'cheeky', 'pop culture', 'other']}
           onSelect = {handleSelect}
           showCheckbox
+          style={{chips: {background: '#8fc25e'}}}
         />
       </div>
 

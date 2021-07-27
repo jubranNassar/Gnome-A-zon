@@ -14,10 +14,11 @@ function MaterialSelect({selectedMaterials, setSelectedMaterials}) {
           isObject={false}
           name = "materials"
           id = "materials-input"
-          className="materials-input-pc form-input-pc"
+          className="materials-input-pc form-input-pc multiselect"
           options = {['resin', 'clay', 'stone', 'plastic', 'ceramic', 'concrete', 'other']}
           onSelect = {handleSelect}
           showCheckbox
+          style={{chips: {background: '#8fc25e'}}}
         />
       </div>
 
