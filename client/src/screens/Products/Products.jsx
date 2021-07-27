@@ -23,17 +23,19 @@ const Products = (props) => {
         <div className="product-heading">
           <p>Gnomes Seeking Homes</p>
         </div>
-        <Search products={products} setSearchResults={setSearchResults}/>
-        <div className="products-container">
-          {searchResults.map((product, index) => (
-            <ProductCard
-              _id={product._id}
-              image={product.image_url}
-              name={product.name}
-              price={product.price}
-              key={index}
-            />
-          ))}
+        <div className="search-and-results">
+          <Search products={products} setSearchResults={setSearchResults}/>
+          <div className="products-container">
+            {searchResults.map((product, index) => (
+              <ProductCard
+                _id={product._id}
+                image={product.image_url}
+                name={product.name}
+                price={product.price}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </Layout>
