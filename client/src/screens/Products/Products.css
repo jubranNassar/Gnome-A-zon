@@ -23,7 +23,7 @@ a {
   width: 68vw;
   max-width: 1400px;
 
-  animation: fadeInAnimation ease 2s;
+  animation: fadeInAnimation ease 500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
