@@ -126,13 +126,6 @@ function ProductEdit(props) {
                         <label htmlFor="edit-material">Material:</label>
                       </div>
                       <div className="edit-text">
-                        {/* <input
-                          id="edit-material"
-                          value={gnome.materials}
-                          name="materials"
-                          required
-                          onChange={handleChange}
-                        /> */}
                         <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}/>
                       </div>
                     </div>
@@ -143,13 +136,6 @@ function ProductEdit(props) {
                         </label>
                       </div>
                       <div className="edit-text">
-                        {/* <input
-                          id="edit-collection"
-                          value={gnome.category}
-                          name="category"
-                          required
-                          onChange={handleChange}
-                        /> */}
                         <CollectionSelect selectedCollections ={selectedCollections} setSelectedCollections={setSelectedCollections}
                         />
                       </div>
