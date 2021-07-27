@@ -15,6 +15,7 @@ import './App.css';
 function App() {
 
   const [user, setUser] = useState(null);
+  const [screen, setScreen] = useState('');
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -27,31 +28,31 @@ function App() {
   return (
     <div className="App">
       <Route exact path = '/'>
-        < Home user={user} />
+        < Home user={user} screen={screen} setScreen={setScreen}/>
       </Route>
 
       <Route exact path = '/gnomes'>
-        <Products user={user} />
+        <Products user={user}  screen={screen} setScreen={setScreen}/>
       </Route>
 
       <Route path = '/gnomes/:id'>
-        < ProductDetails user={user}/>
+        < ProductDetails user={user} screen={screen} setScreen={setScreen}/>
       </Route>
 
       <Route path = "/edit/:id">
-        < ProductEdit user={user}/>
+        < ProductEdit user={user}  screen={screen} setScreen={setScreen}/>
       </Route>
 
       <Route exact path = "/create">
-        < ProductCreate user={user}/>
+        < ProductCreate user={user}  screen={screen} setScreen={setScreen}/>
       </Route>
 
       <Route exact path = "/sign-up">
-        < SignUp setUser={setUser} user={user}/>
+        < SignUp setUser={setUser} user={user}  screen={screen} setScreen={setScreen}/>
       </Route>
 
       <Route exact path = "/sign-in">
-        < SignIn setUser={setUser} user={user}/>
+        < SignIn setUser={setUser} user={user}  screen={screen} setScreen={setScreen}/>
       </Route>
 
       <Route exact path = "/sign-out">
