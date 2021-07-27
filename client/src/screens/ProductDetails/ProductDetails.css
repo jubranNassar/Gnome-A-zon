@@ -2,17 +2,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
   background-image: url(../../images/detailScreenImage.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: fit-content;
+
 }
 
 .border {
   display: flex;
-  height: 100vh;
+  height: fit-content;
 }
 
 .details-card {
@@ -21,7 +22,6 @@
   justify-content: flex-end;
   align-items: center;
   margin: 80px auto;
-  padding: 20px;
   background: rgba(143, 194, 94, 0.7);
   width: 80vw;
   height: 75vh;
@@ -258,7 +258,7 @@ span {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 720px) {
   .details-card {
     display: flex;
     flex-direction: column;
@@ -275,7 +275,7 @@ span {
 
   .details {
     width: 70vw;
-    margin: 20px;
+    margin-top: 6vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -284,6 +284,10 @@ span {
 
   .label-input {
     min-width: 270px;
+  }
+
+  .labels {
+    text-decoration: underline;
   }
 
   .img-div {
