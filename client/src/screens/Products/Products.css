@@ -28,6 +28,15 @@ a {
   animation-fill-mode: forwards;
 }
 
+.search-and-results {
+  display: flex;
+}
+
+#search-sidebar {
+  height: 100vh;
+  background-color: brown;
+}
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
