@@ -164,6 +164,7 @@ textarea {
 
   .form-input-si {
     min-height: 25px;
+    opacity: .75;
   }
 
   .form-label-input-div-si{
