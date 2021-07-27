@@ -1,8 +1,10 @@
 import Multiselect from 'multiselect-react-dropdown';
+import { useState } from 'react';
 
 function CollectionSelect({selectedCollections, setSelectedCollections}) {
   
     const handleSelect = (option) => {
+      console.log(option);
       setSelectedCollections(...selectedCollections, option);
     }
   
@@ -16,6 +18,7 @@ function CollectionSelect({selectedCollections, setSelectedCollections}) {
           options = {['holiday', 'humorous', 'hobbies', 'traditional', 'cheeky', 'pop culture', 'other']}
           onSelect = {handleSelect}
           showCheckbox
+          style={{chips: {background: '#8fc25e'}}}
         />
       </div>
 

@@ -239,9 +239,7 @@ span {
     min-width: 190px;
     overflow-y: auto;
   }
-  .labels {
-    min-width: ;
-  }
+  
 }
 
 @media (max-width: 800px) {
