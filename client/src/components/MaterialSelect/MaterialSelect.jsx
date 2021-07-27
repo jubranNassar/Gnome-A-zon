@@ -1,10 +1,8 @@
 import Multiselect from 'multiselect-react-dropdown';
-import { useState } from 'react';
 
 function MaterialSelect({selectedMaterials, setSelectedMaterials}) {
   
     const handleSelect = (option) => {
-      console.log(option)
       setSelectedMaterials(...selectedMaterials, option)
     }
   

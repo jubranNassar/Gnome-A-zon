@@ -25,7 +25,7 @@ function ProductCreate(props) {
 
   useEffect(()=>{
     setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections]})
-  },[selectedCollections, selectedMaterials])
+  },[selectedCollections, selectedMaterials,])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,13 +35,6 @@ function ProductCreate(props) {
     })
   }
 
-  // const handleSelect = (e) => {
-  //   const { name, value } = e.target
-  //   setGnome({
-  //     ...gnome,
-  //     [name]: [value]
-  //   })
-  // }
 
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -135,15 +128,6 @@ function ProductCreate(props) {
               <div className="label-div-pc">   
                 <label htmlFor="materials-input">Materials: </label>
               </div>
-              {/* <input
-                type="text" 
-                id="materials-input"
-                className="materials-input-pc form-input-pc"
-                name="materials"
-                value={gnome.materials}
-                onChange={handleChange}
-                required
-              /> */}
               <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}/>
             </div> 
 
@@ -151,15 +135,6 @@ function ProductCreate(props) {
               <div className="label-div-pc">
                 <label htmlFor="category-input">Category: </label>
               </div>
-              {/* <input
-                type="text" 
-                id="category-input"
-                className="category-input-pc form-input-pc"
-                name="category"
-                value={gnome.category}
-                onChange={handleSelect}
-                required
-              /> */}
               <CollectionSelect selectedCollections ={selectedCollections} setSelectedCollections={setSelectedCollections}
               />
             </div>

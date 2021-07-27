@@ -1,11 +1,8 @@
 import Multiselect from 'multiselect-react-dropdown';
-import { useState } from 'react';
-import './CollectionSelect.css';
 
 function CollectionSelect({selectedCollections, setSelectedCollections}) {
   
     const handleSelect = (option) => {
-      console.log(option);
       setSelectedCollections(...selectedCollections, option);
     }
   
