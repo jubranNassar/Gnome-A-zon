@@ -100,6 +100,7 @@ function ProductEdit(props) {
                       <div className="edit-text">
                         <textarea
                           rows={5}
+                          name="details"
                           id="edit-details"
                           value={gnome.details}
                           required
