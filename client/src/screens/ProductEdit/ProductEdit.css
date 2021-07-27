@@ -6,13 +6,13 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
-  min-height: 700px;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
 }
 
 .border-edit {
-  height: 100vh;
+  height: fit-content;
 }
 
 .edit-card {
@@ -43,7 +43,7 @@
 
 .edit-image {
   width: 20vw;
-  height: 35vh;
+  min-width: 200px;
   max-height: 350px;
   border: 2px solid #454021;
 }
@@ -75,6 +75,7 @@
 #edit-name {
   font-size: 4rem;
   width: 32vw;
+  min-width: 400px;
   padding: 6px;
   font-family: Delius Swash Caps;
   text-align: center;
@@ -87,6 +88,7 @@
 
 #edit-details {
   width: 25vw;
+  min-width: 155px;
   padding: 4px;
 }
 
@@ -103,6 +105,7 @@
 #edit-collection {
   width: 25vw;
   padding: 4px;
+  
 }
 
 .edit-label {
@@ -114,12 +117,6 @@
   padding: 10px;
 }
 
-/* .collection-and-button {
-  display: flex;
-  justify-content: space-around;
-  width: 50vw;
-} */
-
 .edit-text {
   display: flex;
   justify-content: flex-start;
@@ -127,25 +124,17 @@
   padding: 10px;
   letter-spacing: 0.9px;
   width: 20vw;
-  min-width: 120px;
+  min-width: 180px;
 }
-
-/* #collection-input {
-  justify-content: space-between;
-  margin-left: -17px;
-} */
-
-/* #collection-label {
-  margin-left: 26px;
-} */
 
 .button-container {
-  /* margin: 0 auto; */
   display: flex;
   align-items: center;
-  /* background-color: blue; */
-  height: 8vh;
+  flex-direction: column;
+  justify-content: center;
+  height: 9vh;
 }
+
 .save-button {
   margin-top: 20px;
   margin: 0px auto;
@@ -154,6 +143,7 @@
   text-align: center;
   min-width: 100px;
   height: 6vh;
+  min-height: 40px;
   width: 7vw;
   align-self: flex-end;
   background-color: #454021;
@@ -174,133 +164,113 @@
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 
-@media (max-width: 300px) {
-  .image-and-form {
-    flex-direction: column;
-    width: 100vw;
+@media (max-width: 1000px) {
+  .edit-label {
+    font-size: 1.7rem;
   }
-  .product-edit {
-    height: 150vh;
+}
 
-  }
-  .edit-card {
-    margin: 0;
-  }
-
-  .edit-label-input {
-    width: 35vw;
-    min-width: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    font-size: 2rem;
-  }
-
-  .edit-image {
-    width: 20vw;
-    min-width: 200px;
-    height: 35vh;
-    max-height: 350px;
-    border: 2px solid #454021;
-  }
+@media (max-width: 800px) {
 
   .form {
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    font-family: "Open Sans", sans-serif;
+    align-items: center;
+  }
+
+  .image-and-form {
+    flex-direction: column;
+  }
+
+  .image-holder {
+    display: flex;
+    justify-content: center;
   }
 
   .edit-form-inputs {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    flex-direction: column;
+    width: 60vw;
+    margin: 20px 0;
   }
 
-  .name-edit {
-    display: flex;
+  .edit-label-input {
     justify-content: space-around;
-    margin-bottom: 60px;
+    margin: 2px;
+    width: 60vw;
   }
-
-  #edit-name {
-    font-size: 5rem;
-    width: 32vw;
-    padding: 6px;
-    font-family: Delius Swash Caps;
-    text-align: center;
+  
+  .edit-text {
+    width: 50vw;
   }
 
   #edit-price {
-    width: 25vw;
+    width: 30vw;
+    min-width: 220px;
     padding: 4px;
   }
-
+  
   #edit-details {
-    width: 25vw;
-    padding: 4px;
-  }
+    width: 30vw;
+    min-width: 220px;
 
+  }
+  
   #edit-image-url {
-    width: 25vw;
-    padding: 4px;
-  }
+    width: 30vw;
+    min-width: 220px;
 
+
+  }
+  
   #edit-material {
-    width: 25vw;
-    padding: 4px;
-  }
+    width: 30vw; 
+    min-width: 220px;
 
+  }
+  
   #edit-collection {
-    width: 25vw;
-    padding: 4px;
+    width: 30vw;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-label-input {
+    flex-direction: column;
   }
 
-  .edit-label {
-    width: 10vw;
-    min-width: 120px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 10px;
+  #edit-name {
+    width: 50vw;
+    min-width: 300px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .edit-card {
+    width: 95vw;
+    padding: 0;
+    margin: 20px auto;
+  }
+  .edit-label-input {
+    width: 50vw;
+    min-width: 250px;
+  }
+
+  .edit-form-inputs {
+    width: 90vw;
+    min-width: 240px;
   }
 
   .edit-text {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 10px;
-    padding: 10px;
-    letter-spacing: 0.9px;
-    width: 20vw;
-    min-width: 120px;
+    width: 75vw;
+    min-width: 230px;
   }
 
-  .button-container {
-    /* margin: 0 auto; */
-    display: flex;
-    align-items: center;
-    /* background-color: blue; */
-    height: 8vh;
-  }
-  .save-button {
-    margin-top: 20px;
-    margin: 0px auto;
-    text-decoration: none;
-    font-size: 2rem;
-    text-align: center;
-    min-width: 100px;
-    height: 6vh;
-    width: 7vw;
-    align-self: flex-end;
-    background-color: #454021;
-    color: white;
-    border-radius: 10px;
-    
-    padding: 2px;
-
-
+  #edit-name {
+    width: 50vw;
+    min-width: 240px;
+    font-size: 2.5rem;
   }
 
- 
+
 }

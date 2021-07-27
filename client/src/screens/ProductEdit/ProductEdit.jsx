@@ -89,6 +89,7 @@ function ProductEdit(props) {
                           value={gnome.price}
                           name="price"
                           required
+                          data-inputmask="'alias': 'currency', 'prefix': '$'"
                           onChange={handleChange}
                         />
                       </div>
