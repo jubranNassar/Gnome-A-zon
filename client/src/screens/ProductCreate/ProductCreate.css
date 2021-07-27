@@ -98,7 +98,7 @@
   transition: all 0.5s ease;
 }
 
-#category-input {
+#category-input-pc {
   width: 25vw;
   min-width: 160px;
   font-size: 1.6rem;
@@ -108,7 +108,7 @@
 }
 
 
-#materials-input {
+#materials-input-pc {
   width: 25vw;
   min-width: 160px;
   font-size: 1.6rem;
@@ -201,6 +201,14 @@ textarea {
     min-width: 500px;
     margin-left: -10vw;
     /* background-color: red; */
+  }
+
+  #category-input-pc {
+    width: 30vw;
+  }
+
+  #materials-input-pc {
+    width: 30vw;
   }
 
 }
