@@ -29,7 +29,7 @@
   font-family: 'Open Sans', sans-serif;
   padding: 2vh 0;
 
-  animation: fadeInAnimation ease 500s;
+  animation: fadeInAnimation ease 500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
