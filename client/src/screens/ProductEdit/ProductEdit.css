@@ -133,12 +133,8 @@
   background-color: white;
   color: black;
   border-radius: 5px;
-
 }
 
-Multiselect chips {
-  background-color: green;
-}
 
 #materials-input {
   width: 20vw;
@@ -147,8 +143,6 @@ Multiselect chips {
   background-color: white;
   color: black;
   border-radius: 5px;
-
-
 }
 
 .button-container {
