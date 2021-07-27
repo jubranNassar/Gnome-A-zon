@@ -6,7 +6,7 @@ import { useParams, Link, useHistory } from "react-router-dom";
 
 function GnomeDetails(props) {
   const [gnome, setGnome] = useState({});
-  const [loaded, setLoaded] = useState(true);
+  const [loaded, setLoaded] = useState(false);
   const { id } = useParams();
   const history = useHistory();
 
@@ -114,7 +114,7 @@ function GnomeDetails(props) {
                       </label>
                     </div>
                     <div className="text">
-                      <div id="materials">{gnome.materials}</div>
+                      <div id="materials">{gnome.materials.join(", ")}</div>
                     </div>
                   </div>
                   <div className="label-input">
@@ -124,7 +124,7 @@ function GnomeDetails(props) {
                       </label>
                     </div>
                     <div className="text">
-                      <div id="collection">{gnome.category}</div>
+                      <div id="collection">{gnome.category.join(", ")}</div>
                     </div>
                   </div>
                   {showUserOptions()}
