@@ -62,6 +62,7 @@
 .form-input-pc {
   width: 25vw;
   min-width: 120px;
+  opacity: .75;
 }
 
 .label-div-pc {
