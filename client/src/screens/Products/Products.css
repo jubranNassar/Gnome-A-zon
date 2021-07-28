@@ -73,8 +73,9 @@ a {
 
 #search-sidebar {
   height: 10vh;
-  position: -webkit-sticky;
-  position: sticky;
+  /* border-bottom: 1px solid brown; */
+  /* position: -webkit-sticky;
+  position: sticky; */
   top: 0;
   width: 50vw;
   min-width: 200px;
@@ -86,6 +87,7 @@ a {
   box-sizing: border-box;
   color: white;
   font-size: 2rem;
+  z-index: 1;
 }
 
 #product-search-form {
