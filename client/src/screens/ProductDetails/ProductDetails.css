@@ -25,7 +25,7 @@
   background: rgba(143, 194, 94, 0.7);
   width: 80vw;
   height: 75vh;
-  min-width: 250;
+  min-width: 250px;
   max-width: 1400px;
   overflow: auto;
 
@@ -353,6 +353,7 @@ span {
 @media (max-width: 300px) {
   .details-card {
     margin: 10px auto;
+    
   }
   .details-img {
     margin: 0;
