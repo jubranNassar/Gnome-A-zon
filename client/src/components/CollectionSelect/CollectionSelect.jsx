@@ -13,7 +13,7 @@ function CollectionSelect({setSelectedCollections, collectionID}) {
           name = "category"
           id = {collectionID}
           className="category-input-pc form-input-pc"
-          options = {['holiday', 'humorous', 'hobbies', 'traditional', 'cheeky', 'pop culture', 'seasons', 'other']}
+          options = {['holiday', 'humorous', 'hobbies', 'traditional', 'cheeky', 'pop culture', 'seasons', 'spooky', 'other']}
           onSelect = {handleSelect}
           onRemove = {handleSelect}
           showCheckbox
