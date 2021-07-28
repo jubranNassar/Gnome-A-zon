@@ -8,6 +8,10 @@ import './ProductCreate.css'
 
 function ProductCreate(props) {
 
+  useEffect(() => {
+    props.setScreen("create")
+  },[])
+
   const [gnome, setGnome] = useState( {
     name: '',
     price: '',
@@ -23,6 +27,9 @@ function ProductCreate(props) {
   const [selectedMaterials, setSelectedMaterials] = useState([]);
   const [selectedCollections, setSelectedCollections] = useState([]);
 
+  const materialID = "materials-input-pc";
+  const collectionID = "category-input-pc";
+
   useEffect(()=>{
     setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections]})
   },[selectedCollections, selectedMaterials,])
@@ -35,6 +42,13 @@ function ProductCreate(props) {
     })
   }
 
+  const handleMaterialSelect = (option) => {
+    setSelectedMaterials([...option]);
+  }
+
+  const handleCollectionSelect = (option) => {
+    setSelectedCollections([...option]);
+  }
 
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -56,7 +70,7 @@ function ProductCreate(props) {
   } else {
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
       <div className='forms-screen-pc'>
         <div className='forms-card-pc'>
           <h3 className='form-title-pc'>Sell a Gnome</h3>
@@ -128,14 +142,22 @@ function ProductCreate(props) {
               <div className="label-div-pc">   
                 <label htmlFor="materials-input">Materials: </label>
               </div>
-              <MaterialSelect setSelectedMaterials={setSelectedMaterials}/>
+              
+              <MaterialSelect 
+                setSelectedMaterials={setSelectedMaterials}
+                materialID={materialID}
+                selectedValues={[]}
+                />
             </div> 
 
             <div className='form-label-input-div-pc'>
               <div className="label-div-pc">
                 <label htmlFor="category-input">Category: </label>
               </div>
-              <CollectionSelect setSelectedCollections={setSelectedCollections}
+              <CollectionSelect 
+                setSelectedCollections={setSelectedCollections}
+                collectionID={collectionID}
+                selectedValues={[]}
               />
             </div>
             <button type="submit" className="form-submit-button-pc btn btn-slide-up">Submit</button>

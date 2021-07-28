@@ -60,6 +60,7 @@ function Nav({ user }) {
     };
   }, []);
 
+
   return (
     <div className="nav-outer-container">
       <FontAwesomeIcon

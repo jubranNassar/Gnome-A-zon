@@ -1,14 +1,17 @@
 .product-edit {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  background-color:#8fc25e;
   background-image: url(../../images/detailScreenImage.jpeg);
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
-  height: fit-content;
+  height: 100vh;
+  max-height:740px;
+  
 }
 
 .border-edit {
@@ -24,9 +27,9 @@
   background: rgba(143, 194, 94, 0.7);
   width: 75vw;
   height: fit-content;
-  min-height: 350px;
+  
 
-  animation: fadeInAnimation ease 2s;
+  animation: fadeInAnimation ease 500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -261,6 +264,12 @@
     width: 30vw;
     min-width: 200px;
   }
+  .product-edit {
+  
+    height: 150vh;
+    max-height: 900px;
+    
+  }
 }
 
 @media (max-width: 600px) {
@@ -283,6 +292,13 @@
   #materials-input {
     width: 40vw;
     min-width: 160px;
+  }
+
+  .product-edit {
+  
+    height: 200vh;
+    max-height: 1245px;
+    
   }
 }
 
@@ -312,6 +328,13 @@
     width: 50vw;
     min-width: 240px;
     font-size: 2.5rem;
+  }
+
+  .product-edit {
+  
+    height: 150vh;
+    max-height: 1000px;
+    
   }
 
 

@@ -13,7 +13,7 @@
   flex-direction: column;
   height: 70vh;
 
-  animation: fadeInAnimation ease 2s;
+  animation: fadeInAnimation ease 500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

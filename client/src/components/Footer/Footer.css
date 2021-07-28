@@ -1,0 +1,42 @@
+.footer {
+  height: fit-content;
+  background-color: #454021;
+  border-top: 3px solid #a6ae9c;
+  color: white;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+
+#footer-site-name {
+  font-family: Dancing Script;
+  font-size: 2.5rem;
+}
+
+#footer-site-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #a6ae9c;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+}
+
+#footer-copyright {
+  padding: 10px;
+}
+
+@media (max-width: 450px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+
+  #footer-site-name {
+    font-size: 2.1rem;
+  }
+}

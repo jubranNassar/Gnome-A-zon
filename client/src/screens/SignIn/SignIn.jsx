@@ -2,11 +2,16 @@ import { useState } from 'react'
 import './SignIn.css'
 import { signIn } from '../../services/users'
 import { useHistory } from 'react-router-dom'
+import { useEffect } from 'react'
 import Layout from '../../components/Layout/Layout.jsx';
 
 
 const SignIn = (props) => {
   const history = useHistory()
+
+  useEffect(() => {
+    props.setScreen('sign-in')
+  },[])
 
   const [form, setForm] = useState({
     email: '',
@@ -56,7 +61,7 @@ const SignIn = (props) => {
   const { email, password } = form
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
 
       <div className='forms-screen-si'>
         <div className='sign-in-forms-card-si'>

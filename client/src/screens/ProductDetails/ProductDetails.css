@@ -25,11 +25,11 @@
   background: rgba(143, 194, 94, 0.7);
   width: 80vw;
   height: 75vh;
-  min-width: 250;
+  min-width: 250px;
   max-width: 1400px;
   overflow: auto;
 
-  animation: fadeInAnimation ease 2s;
+  animation: fadeInAnimation ease 500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -71,9 +71,7 @@
   line-height: 50px;
 }
 
-/* #price {
-  margin: 0 0px;
-} */
+
 
 #description {
   max-height: 200px;
@@ -208,6 +206,18 @@ span {
 #sold {
   font-size: 22px;
 }
+
+
+.loading-details {
+  background-image: url(../../images/yellowforest.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+
 @media only screen and (max-width: 1060px) {
   #description {
     overflow-y: auto;
@@ -353,6 +363,7 @@ span {
 @media (max-width: 300px) {
   .details-card {
     margin: 10px auto;
+    
   }
   .details-img {
     margin: 0;

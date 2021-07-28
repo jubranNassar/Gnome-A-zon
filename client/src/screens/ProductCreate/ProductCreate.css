@@ -98,20 +98,22 @@
   transition: all 0.5s ease;
 }
 
-#category-input {
+#category-input-pc {
   width: 25vw;
   min-width: 160px;
-  font-size: 1.6rem;
-  background-color: red;
+  font-size: 1.4rem;
+  line-height: 1rem;
+  background-color: white;
   color: black;
   border-radius: 5px;
 }
 
 
-#materials-input {
+#materials-input-pc {
   width: 25vw;
   min-width: 160px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1rem;
   background-color: white;
   color: black;
   border-radius: 5px;
@@ -200,7 +202,14 @@ textarea {
     width: 70vw;
     min-width: 500px;
     margin-left: -10vw;
-    /* background-color: red; */
+  }
+
+  #category-input-pc {
+    width: 30vw;
+  }
+
+  #materials-input-pc {
+    width: 30vw;
   }
 
 }

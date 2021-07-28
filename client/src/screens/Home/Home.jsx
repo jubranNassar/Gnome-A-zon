@@ -1,10 +1,16 @@
 import './Home.css'
 import Layout from '../../components/Layout/Layout.jsx'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Home = (props) => {
+
+  useEffect(() => {
+    props.setScreen('home')
+  },[])
+
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
       <div className='home'>
         <div className = 'home_inner'>
         <div className="welcome_home_card">

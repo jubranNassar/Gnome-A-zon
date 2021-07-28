@@ -6,7 +6,7 @@ import { useParams, Link, useHistory } from "react-router-dom";
 
 function GnomeDetails(props) {
   const [gnome, setGnome] = useState({});
-  const [loaded, setLoaded] = useState(true);
+  const [loaded, setLoaded] = useState(false);
   const { id } = useParams();
   const history = useHistory();
 
@@ -18,6 +18,7 @@ function GnomeDetails(props) {
     }
 
     fetchGnome();
+    props.setScreen('detail')
   }, [id]);
 
 
@@ -65,11 +66,11 @@ function GnomeDetails(props) {
   }
 
   if (!loaded) {
-    return (<h1>Loading...</h1>)
+    return (<div className="loading-details">Loading...</div>)
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
       <div className="product-info">
         <div className="border">
           <div className="details-card">
@@ -114,7 +115,7 @@ function GnomeDetails(props) {
                       </label>
                     </div>
                     <div className="text">
-                      <div id="materials">{gnome.materials}</div>
+                      <div id="materials">{gnome.materials.join(", ")}</div>
                     </div>
                   </div>
                   <div className="label-input">
@@ -124,7 +125,7 @@ function GnomeDetails(props) {
                       </label>
                     </div>
                     <div className="text">
-                      <div id="collection">{gnome.category}</div>
+                      <div id="collection">{gnome.category.join(", ")}</div>
                     </div>
                   </div>
                   {showUserOptions()}

@@ -21,6 +21,9 @@ function ProductEdit(props) {
   const [selectedMaterials, setSelectedMaterials] = useState([]);
   const [selectedCollections, setSelectedCollections] = useState([]);
 
+  const materialID = "materials-input";
+  const collectionID = "category-input";
+
   let { id } = useParams();
 
   useEffect(() => {
@@ -29,11 +32,16 @@ function ProductEdit(props) {
       setGnome(gnome);
     };
     fetchGnome();
+    props.setScreen('edit')
   }, [id]);
 
   useEffect(()=>{
-    setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections]})
-  },[selectedCollections, selectedMaterials])
+    setGnome({...gnome, category: [...selectedCollections]})
+  },[selectedCollections])
+
+  useEffect(()=>{
+    setGnome({...gnome, materials: [...selectedMaterials]})
+  },[selectedMaterials])  
 
   const handleChange = async (e) => {
     const { name, value } = e.target;
@@ -55,7 +63,7 @@ function ProductEdit(props) {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} screen={props.screen}>
       <div className="product-edit">
         <div className="border-edit">
           <div className="edit-card">
@@ -100,6 +108,7 @@ function ProductEdit(props) {
                       <div className="edit-text">
                         <textarea
                           rows={5}
+                          name="details"
                           id="edit-details"
                           value={gnome.details}
                           required
@@ -126,7 +135,10 @@ function ProductEdit(props) {
                         <label htmlFor="edit-material">Material:</label>
                       </div>
                       <div className="edit-text">
-                        <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}/>
+                        <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}
+                        materialID={materialID}
+                        selectedValues={gnome.materials}
+                        />
                       </div>
                     </div>
                     <div className="edit-label-input" id="collection-input">
@@ -137,6 +149,8 @@ function ProductEdit(props) {
                       </div>
                       <div className="edit-text">
                         <CollectionSelect selectedCollections ={selectedCollections} setSelectedCollections={setSelectedCollections}
+                        collectionID={collectionID}
+                        selectedValues={gnome.category}
                         />
                       </div>
                     </div>
