@@ -66,7 +66,7 @@ function GnomeDetails(props) {
   }
 
   if (!loaded) {
-    return (<h1>Loading...</h1>)
+    return (<div className="loading-details">Loading...</div>)
   }
 
   return (
