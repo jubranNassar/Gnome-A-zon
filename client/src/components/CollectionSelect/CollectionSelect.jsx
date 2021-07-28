@@ -1,6 +1,6 @@
 import Multiselect from 'multiselect-react-dropdown';
 
-function CollectionSelect({setSelectedCollections}) {
+function CollectionSelect({setSelectedCollections, collectionID}) {
   
     const handleSelect = (option) => {
       setSelectedCollections([...option]);
@@ -11,7 +11,7 @@ function CollectionSelect({setSelectedCollections}) {
         <Multiselect
           isObject={false}
           name = "category"
-          id = "category-input"
+          id = {collectionID}
           className="category-input-pc form-input-pc"
           options = {['holiday', 'humorous', 'hobbies', 'traditional', 'cheeky', 'pop culture', 'other']}
           onSelect = {handleSelect}

@@ -1,9 +1,10 @@
-import { set } from 'lodash';
+
 import { useState } from 'react';
+
 
 function Search({products, setSearchResults}) {
   const [searchTerm, setSearchTerm] = useState("");
- 
+  
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value.toLowerCase());
@@ -19,13 +20,20 @@ function Search({products, setSearchResults}) {
 
   return (
     <div id="search-sidebar">
-      <label htmlFor = "search-bar">Search: </label>
-      <input type="text" 
-        id= "search-bar"
-        name="search-bar"
-        value={searchTerm}
-        onChange={handleChange}
-      />
+      <form 
+        id="product-search-form"
+        onSubmit={(e)=>e.preventDefault()}>
+        <div className="search-label-input-div">
+        <input type="text" 
+          id= "search-bar"
+          name="search-bar"
+          value={searchTerm}
+          onChange={handleChange}
+          blurOnSubmit={true}
+          placeholder="Search"
+        />
+        </div>
+      </form>
     </div>
   )
 }
