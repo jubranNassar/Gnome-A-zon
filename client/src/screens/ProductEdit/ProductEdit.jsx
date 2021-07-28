@@ -36,8 +36,12 @@ function ProductEdit(props) {
   }, [id]);
 
   useEffect(()=>{
-    setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections]})
-  },[selectedCollections, selectedMaterials])
+    setGnome({...gnome, category: [...selectedCollections]})
+  },[selectedCollections])
+
+  useEffect(()=>{
+    setGnome({...gnome, materials: [...selectedMaterials]})
+  },[selectedMaterials])  
 
   const handleChange = async (e) => {
     const { name, value } = e.target;
@@ -132,7 +136,9 @@ function ProductEdit(props) {
                       </div>
                       <div className="edit-text">
                         <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}
-                        materialID={materialID}/>
+                        materialID={materialID}
+                        selectedValues={gnome.materials}
+                        />
                       </div>
                     </div>
                     <div className="edit-label-input" id="collection-input">
@@ -144,6 +150,7 @@ function ProductEdit(props) {
                       <div className="edit-text">
                         <CollectionSelect selectedCollections ={selectedCollections} setSelectedCollections={setSelectedCollections}
                         collectionID={collectionID}
+                        selectedValues={gnome.category}
                         />
                       </div>
                     </div>

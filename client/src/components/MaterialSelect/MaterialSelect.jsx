@@ -1,6 +1,6 @@
 import Multiselect from 'multiselect-react-dropdown';
 
-function MaterialSelect({setSelectedMaterials, materialID}) {
+function MaterialSelect({setSelectedMaterials, materialID, selectedValues}) {
   
     const handleSelect = (option) => {
       setSelectedMaterials([...option]);
@@ -15,6 +15,7 @@ function MaterialSelect({setSelectedMaterials, materialID}) {
           id = {materialID}
           className="materials-input-pc form-input-pc multiselect"
           options = {['resin', 'clay', 'stone', 'plastic', 'ceramic', 'concrete', 'other']}
+          selectedValues={selectedValues}
           onSelect = {handleSelect}
           onRemove = {handleSelect}
           showCheckbox
