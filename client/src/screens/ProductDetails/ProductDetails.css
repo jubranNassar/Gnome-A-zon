@@ -71,9 +71,7 @@
   line-height: 50px;
 }
 
-/* #price {
-  margin: 0 0px;
-} */
+
 
 #description {
   max-height: 200px;
@@ -208,6 +206,18 @@ span {
 #sold {
   font-size: 22px;
 }
+
+
+.loading-details {
+  background-image: url(../../images/yellowforest.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+
 @media only screen and (max-width: 1060px) {
   #description {
     overflow-y: auto;
