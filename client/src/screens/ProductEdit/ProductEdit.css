@@ -1,8 +1,6 @@
 .product-edit {
-  /* box-sizing: border-box; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   background-color:#8fc25e;
   background-image: url(../../images/detailScreenImage.jpeg);
   background-position: top center;
@@ -29,7 +27,7 @@
   background: rgba(143, 194, 94, 0.7);
   width: 75vw;
   height: fit-content;
-  /* min-height: 350px; */
+  
 
   animation: fadeInAnimation ease 500ms;
   animation-iteration-count: 1;

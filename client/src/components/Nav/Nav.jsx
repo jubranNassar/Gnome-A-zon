@@ -59,14 +59,7 @@ function Nav({ user }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  // const hideMenu = () => {
-  //   const navLinks = document.querySelectorAll('a')
-  //   navLinks.forEach(link => link.addEventListener('click', () => {
-  //     document.getElementsByClassName('nav-container').style.display = "none";
-    
-  //   }))
-  // }
-  //   hideMenu();
+
 
   return (
     <div className="nav-outer-container">
