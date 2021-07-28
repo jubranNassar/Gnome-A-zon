@@ -21,6 +21,9 @@ function ProductEdit(props) {
   const [selectedMaterials, setSelectedMaterials] = useState([]);
   const [selectedCollections, setSelectedCollections] = useState([]);
 
+  const materialID = "materials-input";
+  const collectionID = "category-input";
+
   let { id } = useParams();
 
   useEffect(() => {
@@ -128,7 +131,8 @@ function ProductEdit(props) {
                         <label htmlFor="edit-material">Material:</label>
                       </div>
                       <div className="edit-text">
-                        <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}/>
+                        <MaterialSelect setSelectedMaterials={setSelectedMaterials} selectedMaterials={selectedMaterials}
+                        materialID={materialID}/>
                       </div>
                     </div>
                     <div className="edit-label-input" id="collection-input">
@@ -139,6 +143,7 @@ function ProductEdit(props) {
                       </div>
                       <div className="edit-text">
                         <CollectionSelect selectedCollections ={selectedCollections} setSelectedCollections={setSelectedCollections}
+                        collectionID={collectionID}
                         />
                       </div>
                     </div>

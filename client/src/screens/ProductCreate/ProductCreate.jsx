@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 import { Redirect } from 'react-router-dom'
 import { createGnome } from '../../services/gnomes.js'
 import Layout from '../../components/Layout/Layout.jsx'
-import Multiselect from 'multiselect-react-dropdown';
-
 import MaterialSelect from '../../components/MaterialSelect/MaterialSelect.jsx'
 import CollectionSelect from '../../components/CollectionSelect/CollectionSelect.jsx'
 import './ProductCreate.css'
@@ -28,6 +26,9 @@ function ProductCreate(props) {
 
   const [selectedMaterials, setSelectedMaterials] = useState([]);
   const [selectedCollections, setSelectedCollections] = useState([]);
+
+  const materialID = "materials-input-pc";
+  const collectionID = "category-input-pc";
 
   useEffect(()=>{
     setGnome({...gnome, materials: [...selectedMaterials], category: [...selectedCollections]})
@@ -141,37 +142,18 @@ function ProductCreate(props) {
               <div className="label-div-pc">   
                 <label htmlFor="materials-input">Materials: </label>
               </div>
-              <Multiselect
-                isObject={false}
-                name = "materials"
-                id = "materials-input-pc"
-                className="materials-input-pc form-input-pc multiselect"
-                options = {['resin', 'clay', 'stone', 'plastic', 'ceramic', 'concrete', 'other']}
-                onSelect = {handleMaterialSelect}
-                onRemove = {handleMaterialSelect}
-                showCheckbox
-                style={{chips: {background: '#8fc25e'}}}
-            />
-              {/* <MaterialSelect setSelectedMaterials={setSelectedMaterials}/> */}
+              
+              <MaterialSelect setSelectedMaterials={setSelectedMaterials}
+              materialID={materialID}/>
             </div> 
 
             <div className='form-label-input-div-pc'>
               <div className="label-div-pc">
                 <label htmlFor="category-input">Category: </label>
               </div>
-              <Multiselect
-                isObject={false}
-                name = "category"
-                id = "category-input-pc"
-                className="category-input-pc form-input-pc"
-                options = {['holiday', 'humorous', 'hobbies', 'traditional', 'cheeky', 'pop culture', 'other']}
-                onSelect = {handleCollectionSelect}
-                onRemove = {handleCollectionSelect}
-                showCheckbox
-                style={{chips: {background: '#8fc25e'}}}
-        />
-              {/* <CollectionSelect setSelectedCollections={setSelectedCollections}
-              /> */}
+              <CollectionSelect setSelectedCollections={setSelectedCollections}
+              collectionID={collectionID}
+              />
             </div>
             <button type="submit" className="form-submit-button-pc btn btn-slide-up">Submit</button>
           </form>
